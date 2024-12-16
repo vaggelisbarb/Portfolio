@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Evangelos Barmpalias</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name ="theme-color" content="#000000"/>
+  <meta 
+    name="description"
+    content="Explore the portfolio of Evangelos Barmpalias, a passionate software developer"
+  />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
+  <link rel="stylesheet" type="text/css" href="./css/font.css">
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./css/components.css">
+  <link rel="stylesheet" type="text/css" href="./css/ExamplesPortfolio.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.js" defer></script>
+
+  <script>
+    async function handleSlider() {
+      const slider = document.querySelector("#slider");
+
+      // Wait for all content to load before setting maxWidth
+      const imageList = slider.querySelectorAll("img");
+      const onLoadPromiseList = [];
+      for (const image of imageList) {
+        if (image.complete) continue;
+
+        const onLoadPromise = new Promise( (resolve, reject) => {
+          if (ima.complete) return resolve();
+          image.onload = resolve;
+          image.onerror = resolve;
+        });
+        onLoadPromiseList.push(onLoadPromise);
+      }
+      await Promise.all(onLoadPromiseList);
+
+
+      slider.style.maxWidth = getComputedStyle(slider).width;
+      slider.style.maxHeight = getComputedStyle(slider).height;
+
+      const sliderParent = slider.parentElement;
+      const sliderTrack = document.querySelector("#slider > .swiper-wrapper");
+      const slides = document.querySelectorAll("#slider > .swiper-wrapper > .swiper-slide");
+
+      const slideToShow = 1;
+      const slidesRequired = 2;
+      for (let i = 0; slides.length <= slideToShow && i <= slidesRequired - 1; i++) {
+        const index = i % slideToShow;
+        const clone = slides[index]?.cloneNode(true);
+        clone?.setAttribute("cloned", "");
+        sliderTrack.appendChild(clone);
+      }
+
+      const swiper = new Swiper("#slider", {
+        grabCursor: true,
+        loop: true, 
+        slidesOffsetAfter: 0,
+        slidesOffsetBefore: 0, 
+        slidesPerView: 1,
+        pagination: {
+          el: "#slider-pagination",
+          clickable: true,
+          bulletElement: "div",
+        },
+        breakpoints: {
+          0: { slidesPerView: 1 },
+          551: { slidesPerView: 1 },
+          1051: { slidesPerView: 1 },
+          1441: { slidesPerView: 1 },
+        },
+      });
+
+
+    }
+  
+    document.addEventListener("DOMContentLoaded", async () => {
+      try {
+        await handleSlider();
+      } catch (error) {
+        console.error(error);
+      }
+    });
+  </script>
+
+</head>
+<body>
+  <div class="examples-portfolio">
+    <!-- profile header section -->
+     <div class="column">
+      <h1 class="column__name ui heading size-text3xl">Evangelos <br/>Barmpalias</h1>
+      <p class="column__title ui text size-textlg">Portfolio page</p>
+     </div>
+     <div class="portfolio">
+      <!-- about me section-->
+       <div class="portfolio__profile">
+        <div class="portfolio__profile-info">
+          <div class="portfolio__profile-info-row">
+            <h2 class="portfolio__name ui heading size-texts">evangelosbarmpalias</h2>
+            <h3 class="portfolio__education ui heading size-texts">education</h3>
+            <h4 class="portfolio__education ui heading size-texts">experience</h4>
+          </div>
+          <div class="portfolio__social-links">
+            <img src="public/images/codicon--github-inverted.svg" 
+              alt="Githubimage" 
+              class="portfolio__social-link--github"/>
+            <img src="public/images/mdi--linkedin.svg"
+              alt="Linkedinimage" 
+              class="portfolio__social-link--github"/>
+            <img src="public/images/ic--round-email.svg"
+              alt="Emailimage" 
+              class="portfolio__social-link--github"/>
+          </div>
+        </div>
+        <div class="portfolio__intro">
+          <div class="portfolio__intro-text">
+            <h5 class="portfolio__greeting ui heading size-text2xl">Hi, I'm Evangelos</h5>
+            <p class="portfolio__description ui text size-textmd">
+              I am a motivated software developer with expertise in Java, Spring Boot, microservices, and web development, 
+Passionate about web and Android development, I enjoy creating applications that enhance user experiences and streamline processes.
+            </p>
+            <div class="portfolio__actions">
+              <button class="portfolio__button--download-cv ui button white size-xs fill round">Download CV</button>
+              <div class="portfolio__experience-link">
+                <div class="portfolio__experience-link-row">
+                  <p class="portfolio__experience-link-text ui text size-textxs">See experiences</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="public/images/img_vector.png" alt="Profileimage" class="portfolio__intro-image" />
+        </div>
+       </div>
+
+      <!-- skills slider section -->
+       <div class="portfolio__skills">
+        <img src="public/images/Vector1.svg" alt="Skillsimage" class="portfolio__skills-image" />
+        <div class="portfolio__skills-content">
+          <div class="portfolio__skills-slider">
+            <div class="portfolio__skills-stack">
+              <div class="portfolio__skills-stack-item">
+                <div class="portfolio__skills-row">
+                  <div id="slider" class="portfolio__skills-slider-container swiper">
+                    <div class="slider-wrapper">
+                      <div class="portfolio__skills-slider-row swiper-slide">
+                        <div class="portfolio__skills-item">
+                          <div class="flex-col-center-start portfolio__skills-item-column">
+                            <img 
+                              src="public/images/logos--javascript_128.svg"
+                              alt="Settingsimage"
+                              class="portfolio__skills-icon--settings"
+                            />
+                            <h2 class="ui heading size-headings">Javascript</h2>
+                          </div>
+                          <div class="flex-col-center-start portfolio__skills-item-column--react">
+                            <img 
+                              src="public/images/devicon--react.svg"
+                              alt="Reactimage"
+                              class="portfolio__skills-icon--react"
+                            />
+                            <h class="ui heading size-headings">React</h2>
+                          </div>
+                        </div>
+                        <h4 class="portfolio__skills-name--nextjs ui heading size-headings">Next.JS</h4>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="public/images/img_rectangle_20.svg"
+                    alt="Placeholderimage"
+                    class="portfolio__skills-placeholder-image"
+                  />
+                </div>
+                <img src="public/images/ri--nextjs-fill.svg" alt="Musicimage" class="portfolio__skills-icon--music" />
+              </div>
+              <div class="portfolio__skills-figma-row">
+                <div class="portfolio__skills-figma-column">
+                  <img
+                    src="public/images/devicon--figma.svg"
+                    alt="Figmaimage"
+                    class="portfolio__skills-icon--figma"
+                  />
+                  <h5 class="ui heading size-headings">Figma</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="slider-pagination" class="portfolio__pager-indicator"></div>
+        </div>
+       </div>
+      
+       <!-- interests section -->
+        <div class="portfolio__interests">
+          <h2 class="portfolio__interest--javascript ui heading size-headingmd">Javascript</h2>
+          <h3 class="portfolio__interest--react ui heading size-headingmd">React</h3>
+          <h4 class="portfolio__interest--coffee ui heading size-headingmd">Coffee</h4>
+        </div>
+        <div clas="portfolio__technologies">
+          <!-- tecnhologies section -->
+           <div class="portfolio__technologies-intro">
+            <p class="portfolio__technologies-title ui text size-textxl">
+              These are the <br/>technologies I've been using
+            </p>
+            <div class="portfolio__technologies-list">
+              <div class="portfolio__technologies-item--frontend frontendcolumn_border">
+                <p class="ui text size-textmd">Front-end Engineer Design</p>
+                <div class="portfolio__technologies-links">
+                  <a href="#">
+                    <div class="portfolio__technologies-link--reactjs">
+                      <img
+                        src="public/images/devicon--react.svg"
+                        alt="Reacticon"
+                        class="portfolio__technologies-icon--user-nodejs"
+                      />
+                      <p class="ui text size-textxs">React JS</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="portfolio__technologies-link--reactjs">
+                      <img
+                        src="public/images/devicon--figma.svg"
+                        alt="Figmaicon"
+                        class="portfolio__technologies-icon--user-nodejs"
+                      />
+                      <p class="ui text size-textxs">Figma</p>
+                    </div>
+                  </a>
+                  <a href="#">
+                    <div class="portfolio__technologies-link--java">
+                      <img
+                        src="public/images/devicon--jasmine.svg"
+                        alt="Jasmineicon"
+                        class="portfolio__technologies-icon--user-nodejs"
+                      />
+                      <p class="ui text size-textxs">Jasmine</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="portfolio__technologies-item--languages languagescolumn_border">
+                <p class="ui text size-textmd">Languages</p>
+                <div class="portfolio__technologies-links--languages">
+                  <a href="#">
+                    <div class="portfolio__technologies-link--java">
+                      <img
+                        src="public/images/logos--javascript.svg"
+                        alt="Javascripticon"
+                        class="portfolio__technologies-icon--user-nodejs"
+                      />
+                      <p class="ui text size-textxs">Javascript</p>
+                    </div>
+                  </a>
+                  <div class="portfolio__technologies-link--java">
+                    <img
+                      src="public/images/devicon--java.svg"
+                      alt="Javaicon"
+                      class="portfolio__technologies-icon--user-nodejs"
+                    />
+                    <p class="ui text size-textxs">Java</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio__technologies-item--devops languagescolumn_border">
+                <p class="ui text size-textmd">Devops</p>
+                <div class="portfolio__technologies-list--devops">
+                  <div class="git-user-profile">
+                    <img 
+                      src="public/images/devicon--git.svg"
+                      alt="Camera Icon"
+                      class="portfolio__technologies-icon--user-nodejs"
+                    />
+                    <p class="ui text size-textxs">Git</p>
+                  </div>
+                  <div class="git-user-profile">
+                    <img 
+                      src="public/images/file-icons--gradle.svg"
+                      alt="Camera Icon"
+                      class="portfolio__technologies-icon--user-nodejs"
+                    />
+                    <p class="ui text size-textxs">Gradle</p>
+                  </div>
+                  <div class="git-user-profile">
+                    <img 
+                      src="public/images/skill-icons--aws-light.svg"
+                      alt="Camera Icon"
+                      class="portfolio__technologies-icon--user-nodejs"
+                    />
+                    <p class="ui text size-textxs">AWS</p>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio__technologies-item--languages languagescolumn_border">
+                <p class="portfolio__name ui text size-textmd">Back-end</p>
+                <div class="portfolio__technologies-link--nodejs">
+                  <img
+                    src="public/images/mdi--nodejs.svg"
+                    alt="Nodejsicon"
+                    class="portfolio__technologies-icon--user-nodejs"
+                  />
+                  <p class="ui text size-textxs">Node.js</p>
+                </div>
+              </div>
+            </div>
+           </div>
+
+           <!-- footer section -->
+            <div class="portfolio__follow">
+              <label class="portfolio__follow-input ui input gray_800 size-xs fill round">
+                <input name="FollowMeEdit" placeholder="Follow me" type="text" />
+                <img src="public/images/codicon--github-inverted.svg" alt="Mdi:github" class="mdigithub" />
+                <img src="public/images/mdi--linkedin.svg" alt="Mdi:github" class="mdigithub" />
+                <img src="public/images/ic--round-email.svg" alt="Mdi:github" class="mdigithub" />
+              </label>
+              <p class="portfolio__copyright ui text size-textxs">vaggelis_barb &copy 2024</p>
+            </div>
+
+        </div>
+
+     </div>
+  </div>
+</body>
+</html>

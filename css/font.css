@@ -1,0 +1,80 @@
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/RalewayMedium.ttf');
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/RalewayExtraLight.ttf');
+    font-family: "Raleway";
+    font-weight: 200;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/RalewayLight.ttf');
+    font-family: "Raleway";
+    font-weight: 300;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/NunitoBold.ttf');
+    font-family: "Nunito";
+    font-weight: 700;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/NunitoMedium.ttf');
+    font-family: "Nunito";
+    font-weight: 500;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/RalewayBold.ttf');
+    font-family: "Raleway";
+    font-weight: 700;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/RalewaySemiBold.ttf');
+    font-family: "Raleway";
+    font-weight: 600;
+}
+
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/RalewayRegular.ttf');
+    font-family: "Raleway";
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/NunitoRegular.ttf');
+    font-family: "Nunito";
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../public/fonts/NunitoLight.ttf');
+    font-family: "Nunito";
+    font-weight: 300;
+}

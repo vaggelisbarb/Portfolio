@@ -1,0 +1,187 @@
+.ui.button.round {
+    border-radius: var(--radius-sm);
+}
+
+.ui.button.size-xs {
+    height: 46px;  
+    padding-left: 34px;
+    padding-right: 34px;
+    font-size: 16px;
+}
+
+.ui.button.fill.white {
+    background-color: var(--white);
+    color: var(--gray_900);
+}
+
+.ui.button {
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    color: var(--gray_900);
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--white);
+    min-width: 184px;
+    border-radius: var(--radius-sm);
+    @media only screen and (min-width: 1440px) {
+        font-size: 13px;
+    }
+}
+
+.ui.input.round {
+    border-radius: var(--radius-lg);
+}
+
+.ui.input.size-xs {
+    height: 90px;
+    padding-left: var(--space-sm);
+    padding-right: 170px;
+    font-size: 26px;
+}
+
+.ui.input.fill.gray_800 {
+    background-color: var(--gray_800);
+    color: var(--gray_400);
+}
+
+.ui.input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: text;
+    color: var(--gray_400);
+    font-size: 26px;
+    gap:var(--space-xl);
+    background-color: var(--gray_800);
+    align-self: stretch;
+    border-radius: var(--radius-lg);
+}
+
+.ui.text.size-textxs {
+    font-size: 16px;
+    font-weight: 400;
+    @media only screen and (min-width: 1440px) {
+        font-size: 13px;
+    }
+}
+
+.ui.text.size-textmd {
+    font-size: 24px;
+    font-weight: 300;
+    @media only screen and (min-width: 1440px) {
+        font-size: 20px;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 22px;
+    }
+}
+
+.ui.text.size-textlg {
+    font-size: 40px;
+    font-weight: 200;
+    @media only screen and (min-width: 1440px) {
+        font-size: 34px;
+    }
+    @media only screen and (max-width: 1050px) {
+        font-size: 38px;
+    }
+    @media only screen and (max-width: 550px) {
+        font-size: 36px;
+    }
+}
+
+.ui.text.size-textxl {
+    font-size: 60px;
+    font-weight: 400;
+    @media only screen and (min-width: 1440px) {
+        font-size: 51px;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 52px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        font-size: 46px;
+    }
+}
+
+.ui.text {
+    color: var(--white);
+    font-family: Nunito;
+}
+
+.ui.heading.size-texts {
+    font-size: 20px;
+    font-weight: 500;
+    @media only screen and (min-width: 1440px) {
+        font-size: 17px;
+    }
+}
+
+.ui.heading.size-text2xl {
+    font-size: 75px;
+    font-weight: 500;
+    @media only screen and (min-width: 1440px) {
+        font-size: 75px;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        font-size: 48px;
+    }
+}
+
+.ui.heading.size-text3xl {
+    font-size: 78px;
+    font-weight: 500;
+    @media only screen and (min-width: 1440px) {
+        font-size: 80px;
+    }
+    @media only screen and (max-width: 1050px) {
+        font-size: 48px;
+    }
+}
+
+.ui.heading.size-headingxs {
+    font-size: 16px;
+    font-weight: 700;
+    @media only screen and (min-width: 1440px) {
+        font-size: 13px;
+    }
+}
+
+.ui.heading.size-headings {
+    font-size: 26px;
+    font-weight: 700;
+    @media only screen and (min-width: 1440px) {
+        font-size: 22px;
+    }
+    @media only screen and (max-width: 1050px) {
+        font-size: 24px;
+    }
+    @media only screen and (max-width: 550px) {
+        font-size: 22px;
+    }
+}
+
+.ui.heading.size-headingmd {
+    font-size: 90px;
+    font-weight: 600;
+    @media only screen and (min-width: 1440px) {
+        font-size: 90px;
+    }
+    @media only screen and (max-width: 1050px) {
+        font-size: 48px;
+    }
+}
+
+.ui.heading {
+    color: var(--gray_900_02);
+    font-family: Raleway;
+}
