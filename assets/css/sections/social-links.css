@@ -1,0 +1,42 @@
+.portfolio__social-links {
+    gap: var(--space-xl);
+    display: flex;
+    @media only screen and (max-width:1050px) {
+    }
+}
+
+.portfolio__social-link--github {
+    height: 24px;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.portfolio__social-link--github:hover {
+    content: url('../../../public/images/mdi--github_white.svg');
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.portfolio__social-link--linkedin {
+    height: 24px;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.portfolio__social-link--linkedin:hover {
+    content: url('../../../public/images/mdi--linkedin_white.svg');
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.portfolio__social-link--email {
+    height: 24px;
+    transition: opacity 0.5s ease-in-out;
+
+}
+
+.portfolio__social-link--email:hover {
+    content: url('../../../public/images/ic--round-email_white.svg');
+    transition: opacity 0.5s ease-in-out;
+
+}

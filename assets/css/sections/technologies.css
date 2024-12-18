@@ -1,0 +1,184 @@
+.portfolio__technologies {
+    margin-top: 316px;
+    padding-left: 56px;
+    padding-right: 56px;
+    gap: 234px;
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: 1440px) {
+        gap: 175px;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        gap: 175px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        gap: 117px;
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+    }
+}
+
+.portfolio__technologies-intro {
+    margin-top: 120px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 50px;
+    display: flex;
+    width: 96%;
+    flex-direction: column;
+    @media only screen and (max-width: 1440px) {
+        width: 100%;
+        gap: 112px;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+        gap: 112px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        gap: 7
+        5px;
+    }
+}
+
+.portfolio__technologies-title {
+    color: var(--gray_300) !important;
+    font-family: Raleway !important;
+    line-height: 70px;
+    @media only screen and (max-width: 1050px) {
+        margin-left: 0px;
+        font-size: 40px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        font-size: 34px;
+    }
+}
+
+.portfolio__technologies-list {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    @media only screen and (max-width: 1050px) {
+        flex-direction: column;
+    }
+}
+
+.portfolio__technologies-item--frontend {
+    gap: var(--space-xl);
+    align-self: center;
+    display: flex;
+    width: 22%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px 34px;
+    border-radius: var(--radius-xs);
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding: var(--space-xl);
+    }
+}
+
+.portfolio__technologies-links {
+    margin-bottom: 8px;
+    gap: var(--space-lg);
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+}
+
+.portfolio__technologies-links--languages {
+    margin-bottom: 8px;
+    gap: var(--space-sm);
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+}
+
+.portfolio__technologies-item--devops {
+    gap: var(--space-sm);
+    width: 22%;
+    padding: 22px 34px;
+    border-radius: var(--radius-xs);
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding: var(--space-xl);
+    }
+}
+
+.portfolio__technologies-list--devops {
+    margin-bottom: 8px;
+    gap: var(--space-sm);
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    @media only screen and (max-width: 1050px) {
+        flex-direction: row;
+        margin-right: 0px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        flex-direction: column;
+    }
+}
+
+.portfolio__technologies-link--nodejs {
+    margin-bottom: 56px;
+    gap: var(--space-lg);
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}
+
+
+.portfolio__technologies-link--reactjs {
+    gap: var(--space-lg);
+    display: flex;
+    align-items: center;
+}
+
+.portfolio__technologies-link--java {
+    gap: var(--space-md);
+    display: flex;
+    align-items: center;
+}
+
+.portfolio__technologies-icon--user-nodejs {
+    height: 34px;
+}
+
+
+.portfolio__technologies-item--languages {
+    gap: var(--space-md);
+    display: flex;
+    width: 22%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 38px;
+    border-radius: var(--radius-xs);
+
+    @media only screen and (max-width: 1050px) {
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding: var(--space-xl);
+    }
+}

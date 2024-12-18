@@ -11,11 +11,7 @@
   />
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper.min.css"/>
-  <link rel="stylesheet" type="text/css" href="./css/index.css">
-  <link rel="stylesheet" type="text/css" href="./css/font.css">
-  <link rel="stylesheet" type="text/css" href="./css/styles.css">
-  <link rel="stylesheet" type="text/css" href="./css/components.css">
-  <link rel="stylesheet" type="text/css" href="./css/ExamplesPortfolio.css">
+  <link rel="stylesheet" type="text/css" href="./assets/css/layouts/main.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.js" defer></script>  
   <script>
     async function handleSlider() {
@@ -88,9 +84,9 @@
 <body>
   <div class="examples-portfolio">
     <!-- profile header section -->
-     <div class="column">
-      <h1 class="column__name ui heading size-text3xl">Evangelos <br/>Barmpalias</h1>
-      <p class="column__title ui text size-textlg">Portfolio page</p>
+     <div class="title">
+      <h1 class="title__name ui heading size-text3xl">Evangelos <br/>Barmpalias</h1>
+      <p class="title__subtitle ui text size-textlg">Portfolio page</p>
      </div>
      <div class="portfolio">
       <!-- about me section-->
@@ -134,60 +130,17 @@ Passionate about web and Android development, I enjoy creating applications that
        </div>
 
       <!-- skills slider section -->
-       <div class="portfolio__skills">
-        <img src="public/images/Vector1.svg" alt="Skillsimage" class="portfolio__skills-image" />
-        <div class="portfolio__skills-content">
-          <div class="portfolio__skills-slider">
-            <div class="portfolio__skills-stack">
-              <div class="portfolio__skills-stack-item">
-                <div class="portfolio__skills-row">
-                  <div id="slider" class="portfolio__skills-slider-container swiper">
-                    <div class="slider-wrapper">
-                      <div class="portfolio__skills-slider-row swiper-slide">
-                        <div class="portfolio__skills-item">
-                          <div class="flex-col-center-start portfolio__skills-item-column">
-                            <img 
-                              src="public/images/logos--javascript_128.svg"
-                              alt="Settingsimage"
-                              class="portfolio__skills-icon--settings"
-                            />
-                            <h2 class="ui heading size-headings">Javascript</h2>
-                          </div>
-                          <div class="flex-col-center-start portfolio__skills-item-column--react">
-                            <img 
-                              src="public/images/devicon--react.svg"
-                              alt="Reactimage"
-                              class="portfolio__skills-icon--react"
-                            />
-                            <h class="ui heading size-headings">React</h2>
-                          </div>
-                          <div class="flex-col-center-start portfolio__skills-item-column--nodejs">
-                            <img 
-                              src="public/images/mdi--nodejs.svg"
-                              alt="Reactimage"
-                              class="portfolio__skills-icon--react"
-                            />
-                            <h class="ui heading size-headings">Node.JS</h2>
-                          </div>
-                          <div class="flex-col-center-start portfolio__skills-item-column--figma">
-                            <img 
-                              src="public/images/devicon--figma.svg"
-                              alt="Reactimage"
-                              class="portfolio__skills-icon--react"
-                            />
-                            <h class="ui heading size-headings">Figma</h2>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+       <div class="portfolio__projects">
+          <div class="portfolio__projects-intro">
+            <div class="portfolio__projects-title">
+              <p class="portfolio__projects-title ui text size-textxl">Explore my recent projects</p>
+              <div class="portfolio__projects-list">
+                <div class="portfolio__projects-item frontendcolumn_border"></div>
+                  <p class="ui text size-textmd">Project 1</p>
               </div>
             </div>
           </div>
-        <div id="slider-pagination" class="portfolio__pager-indicator"></div>
-      </div>
-      </div>
+       </div>
       
        <!-- interests section -->
         <div class="portfolio__interests">

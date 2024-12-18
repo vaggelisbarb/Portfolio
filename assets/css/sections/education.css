@@ -1,0 +1,33 @@
+.portfolio__education {
+    color: var(--purple_300) !important;
+    --b: 0em;   /* the thickness of the line */
+    --c: var(--purple_300); /* the color */
+    padding-block: var(--b);
+    background: 
+      linear-gradient(var(--c) 6%,var(--gray_900_59) 0) 0% calc(10% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 10% 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat !important;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: .3s var(--_s,0.08s) linear,background-size .3s calc(.3s - var(--_s,0s)) !important;
+}
+
+.portfolio__education:visited {
+    color: var(--purple_300) !important;
+}
+.portfolio__education:hover {
+    cursor: pointer;
+    color: var(--white) !important;
+    --_p: 100%;
+    --_s: .1s;
+
+}
+
+.portfolio__education:focus {
+    cursor: pointer;
+    color: var(--light_green_200) !important;
+}
+
+.portfolio__education:active {
+    cursor: pointer;
+    color: var(--black_900) !important;
+}

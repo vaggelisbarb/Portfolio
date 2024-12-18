@@ -1,0 +1,38 @@
+.portfolio__interests {
+    margin-top: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: 1440px) {
+        gap: 80px;
+    }
+    
+    @media only screen and (max-width: 1050px) {
+        gap: 60px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        gap: var(--space-3xl);
+    }
+}
+
+.portfolio__interest--javascript {
+    color: var(--deep_purple_a100) !important;
+    @media only screen and (max-width: 1440px) {
+        font-size: 48px;
+    }
+}
+
+.portfolio__interest--react {
+    color: var(--deep_purple_a200_01) !important;
+    @media only screen and (max-width: 1440px) {
+        font-size: 48px;
+    }
+}
+
+.portfolio__interest--coffee {
+    color: var(--deep_purple_a700) !important;
+    @media only screen and (max-width: 1440px) {
+        font-size: 48px;
+    }
+}

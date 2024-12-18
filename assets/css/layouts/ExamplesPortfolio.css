@@ -1,0 +1,112 @@
+.git-user-profile {
+    margin-right: 26px;
+    gap: var(--space-lg);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    align-self: stretch;
+    @media only screen and (max-width: 1050px) {
+        margin-right: 0px;
+    }
+}
+
+.examples-portfolio {
+    gap: 50px;
+    background-color: var(--black_900);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 44px;
+
+    @media only screen and (max-width: 1050px) {
+        padding: 20px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding: var(--space-xl);
+    }
+}
+
+.portfolio {
+    margin-left: auto;
+    background-color: var(--gray_900);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1720px;
+    margin-right: auto;
+    border-radius: var(--radius-2xl);
+    @media only screen and (max-width: 1440px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+.portfolio__actions {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    @media only screen and (max-width: 550px) {
+        flex-direction: column;
+    }
+}
+
+.portfolio__button--download-cv {
+    color: var(--gray_900) !important;
+    transition: 
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    padding-left: 34px;
+    padding-right: 34px;
+    background-color: var(--white);
+    height: 46px;
+    border-radius: 22px ; 
+}
+
+.portfolio__button--download-cv:hover {
+    background-color: var(--deep_purple_a700 ) !important;
+    color: var(--white) !important;
+    transition: 
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+
+}
+
+.portfolio__pager-indicator {
+    margin-left: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    @media only screen and (max-width: 1050px) {
+        margin-left: 0px;
+    }
+
+    & > .swiper-pagination-bullet {
+        background-color: var(--gray_700);
+        width: 20px;
+        height: 12px;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 6.33px;
+        border-radius: 6px;
+    }
+
+    & > .swiper-pagination-bullet-active {
+        background-color: var(--blue_gray_100);
+        width: 68px;
+        height: 12px;
+        cursor: pointer;
+        display: inline-block;
+        margin-right: 6.33px;
+        border-radius: 6px;
+    }
+}

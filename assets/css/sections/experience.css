@@ -1,0 +1,42 @@
+.portfolio__experience-link {
+    padding-left: 34px;
+    padding-right: 34px;
+    align-self: center;
+    flex: 1;
+    display: flex;
+    @media only screen and (max-width: 1440px) {
+        align-self: stretch;
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+        padding-bottom: var(--space-xl);
+        margin-left: var(--space-xl);
+    }
+
+    @media only screen and (max-width: 550px) {
+        align-self: stretch;
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+    }
+}
+
+.portfolio__experience-link-row {
+    margin-bottom: 8px;
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    @media only screen and (max-width: 1440px) {
+        margin-left: 20px;
+        width: 20%;
+    }
+
+    @media only screen and (max-width: 1050px) {
+        width: 20%;
+    }
+}
+
+.portfolio__experience-link-text {
+    color: var(--purple_300) !important;
+    font-weight: 500 !important;
+}
