@@ -4,7 +4,7 @@
     --c: var(--purple_300); /* the color */
     padding-block: var(--b);
     background: 
-      linear-gradient(var(--c) 6%,var(--gray_900_59) 0) 0% calc(10% - var(--_p,0%))/100% 200%,
+      linear-gradient(var(--c) 7%,var(--gray_900_59) 0) 0% calc(20% - var(--_p,0%))/100% 200%,
       linear-gradient(var(--c) 10% 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat !important;
     -webkit-background-clip: text,padding-box;
             background-clip: text,padding-box;

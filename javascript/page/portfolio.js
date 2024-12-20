@@ -34,3 +34,7 @@ function redirectToLinkedin() {
             window.location.href = 'https://www.linkedin.com/in/evangelos-barmpalias-488b3b18b/';
         });
 }
+
+function openEducationPage() {
+    const portfolioContainer = document.querySelector('.portfolio');
+}
