@@ -26,7 +26,7 @@ Here are some screenshots of how the portfolio website looks across different de
 
 ### Desktop View
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/543d5b56-1ab9-4d43-9fa5-012a0b29f147" alt="PC Screenshot" width="800">
+  <img src="https://github.com/user-attachments/assets/543d5b56-1ab9-4d43-9fa5-012a0b29f147" alt="PC Screenshot" width="700" height="700">
 </p>
 
 ## Features
