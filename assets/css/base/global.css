@@ -1,3 +1,6 @@
+/* global.css - Contains global styles, fonts, and utility classes */
+
+/* Basic */
 .ui.button.round {
     border-radius: var(--radius-sm);
 }
@@ -184,4 +187,150 @@
 .ui.heading {
     color: var(--gray_900_02);
     font-family: Raleway;
+}
+
+/* Font imports */
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/RalewayMedium.ttf');
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/RalewayExtraLight.ttf');
+    font-family: "Raleway";
+    font-weight: 200;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/RalewayLight.ttf');
+    font-family: "Raleway";
+    font-weight: 300;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/NunitoBold.ttf');
+    font-family: "Nunito";
+    font-weight: 700;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/NunitoMedium.ttf');
+    font-family: "Nunito";
+    font-weight: 500;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/RalewayBold.ttf');
+    font-family: "Raleway";
+    font-weight: 700;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/RalewaySemiBold.ttf');
+    font-family: "Raleway";
+    font-weight: 600;
+}
+
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/RalewayRegular.ttf');
+    font-family: "Raleway";
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/NunitoRegular.ttf');
+    font-family: "Nunito";
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-style: normal;
+    src: url('../../../public/fonts/NunitoLight.ttf');
+    font-family: "Nunito";
+    font-weight: 300;
+}
+
+/* Global Variables */
+:root {
+    --black_900: #0A080F;
+    --blue_gray_100: #D9D9D9;
+    --blue_gray_400: #7C9CA4;
+    --deep_orange_300: #FF7262;
+    --deep_orange_600:#F24E1E;
+    --deep_orange_600_01:#F34F29;
+    --deep_purple_a100:#C69AFF;
+    --deep_purple_a200:#A259FF;
+    --deep_purple_a200_01:#9F52FF;
+    --deep_purple_a700:#6104D5;
+    --gray_300:#C7C7C7;
+    --gray_400:#6E6E6E;
+    --gray_400:#C2C2C2;
+    --gray_700:#5F5F5F;
+    --gray_800:#131313;
+    --gray_800:#424242;
+    --gray_900:#0C0C0C;
+    --gray_900_01:#232323;
+    --gray_900_02:#272727;
+    --gray_900_03:#1F1F1F;
+    --gray_900_59:#0E0E0E;
+    --gray_900:#120F19;
+    --green_400:#68A063;
+    --green_a400:#0ACF83;
+    --green_a700:#15A645;
+    --light_blue_300:#61DBFB;
+    --light_blue_400:#1ABCFE;
+    --light_blue_800:#0074BD;
+    --light_green_200:#C2C89E;
+    --lime_500:#D9F430;
+    --orange_500:#FF9900;
+    --purple_300:#B291FF;
+    --purple_700:#8A4182;
+    --red_600:#EA2D2E;
+    --teal_100:#C0E5D7;
+    --teal_50:#D8E5F8;
+    --white:#FFFFFF;
+
+    --radius-xs: 12px;
+    --radius-sm: 22px;
+    --radius-md: 34px;
+    --radius-lg: 44px;
+    --radius-xl: 60px;
+    --radius-2xl: 100px;
+    --radius-3xl: 200px
+
+    --space-xs: 10px;
+    --space-sm: 12px;
+    --space-md: 13px;
+    --space-lg: 14px;
+    --space-xl: 16px;
+    --space-2xl: 30px;
+    --space-3xl: 40px;
+}
+
+.flex-col-center-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }

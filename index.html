@@ -9,7 +9,7 @@
     name="description"
     content="Explore the portfolio of Evangelos Barmpalias, a passionate software developer"
   />
-
+  <link rel="icon" href="/public/images/eb_tab_icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper.min.css"/>
   <link rel="stylesheet" type="text/css" href="./assets/css/layouts/main.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.js" defer></script>  
@@ -88,17 +88,15 @@
       <h1 class="title__name ui heading size-text3xl">Evangelos <br/>Barmpalias</h1>
       <p class="title__subtitle ui text size-textlg">Portfolio page</p>
      </div>
-     <div class="portfolio">
-      <!-- about me section-->
-       <div class="portfolio__profile">
-        <div class="portfolio__profile-info">
-          <div class="portfolio__profile-info-row">
-            <h2 class="portfolio__name ui heading size-texts">evangelosbarmpalias</h2>
-            <h3 class="portfolio__education ui heading size-texts">education</h3>
-            <h4 class="portfolio__education ui heading size-texts">experience</h4>
-          </div>
-          <div class="portfolio__social-links">
-            <img src="public/images/codicon--github-inverted.svg" 
+     <main class="screen-container">
+      <div class="content-wrapper">
+        <nav class="navigation-bar" role="navigation">
+          <div class="nav-items">
+            <span class="nav-username">evangelosbarmpalias</span>
+            <a href="#education" class="nav-link">education</a>
+            <a href="#experience" class="nav-link">experience</a>
+            <div class="portfolio__social-links">
+              <img src="public/images/codicon--github-inverted.svg" 
               alt="Githubimage" 
               class="portfolio__social-link--github"/>
             <img src="public/images/mdi--linkedin.svg"
@@ -107,15 +105,20 @@
             <img src="public/images/ic--round-email.svg"
               alt="Emailimage" 
               class="portfolio__social-link--email"/>
+            </div>
           </div>
-        </div>
-        <div class="portfolio__intro">
-          <div class="portfolio__intro-text">
-            <h5 class="portfolio__greeting ui heading size-text2xl">Hi, I'm Evangelos</h5>
-            <p class="portfolio__description ui text size-textmd">
-              I am a motivated software developer with expertise in Java, Spring Boot, microservices, and web development, 
+        </nav>
+        
+        <!-- Overview section -->
+        <section aria-labelledby="profile-title">
+          <h1 id="profile-title" class="page-title">Hi, I'm Evangelos</h1>
+            <div class="profile-overview">
+              <p class="profile-description">
+                I am a motivated software developer with expertise in Java, Spring Boot, microservices, and web development, 
 Passionate about web and Android development, I enjoy creating applications that enhance user experiences and streamline processes.
-            </p>
+              </p>
+            <img src="public/images/img_vector.png" alt="Profileimage" class="profile-image" />
+            </div>
             <div class="portfolio__actions">
               <button class="portfolio__button--download-cv ui button white size-xs fill round">Download CV</button>
               <div class="portfolio__experience-link">
@@ -124,49 +127,66 @@ Passionate about web and Android development, I enjoy creating applications that
                 </div>
               </div>
             </div>
-          </div>
-          <img src="public/images/img_vector.png" alt="Profileimage" class="portfolio__intro-image" />
-        </div>
-       </div>
+        </section>
 
       <!-- projects section -->
-      <div class="portfolio__projects">
-        <div class="portfolio__projects-intro">
-          <p class="portfolio__projects-title ui text size-textxl">Browse my recent <br/> projects</p>
-          <div class="portfolio__projects-list">
-            <div class="portfolio__projects-item frontendcolumn_border">
-              <p class="ui text size-textlg">the Project</p>
-              <div class="portfolio__projects-item--image-container">
-                <img class="portfolio__projects-item--image" src="/public/images/the_project.png"/>
+      <section class="projects-container" aria-label="Projects Section">
+        <h2 class="projects-heading">Browse my projects</h2>
+        <div class="projects-grid">
+          <div class="projects-row">
+            <article class="project-card">
+              <div class="project-border">
+                <div class="project-content">
+                  <h3 class="project-title">Socket Guardian</h3>
+                  <div class="project-links">
+                    <a href="#" tabindex="0">Github code</a>
+                    <a href="#" tabindex="0">Demo</a>
+                  </div>
+                  <div class="project-stack">
+                    <div class="project-icon-wrapper">
+                      <img loading="lazy" src="/public/images/logo1.png" alt="Technology icon" class="tech-icon"/>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="portfolio__projects-item--button-list">
-                <button class="portfolio__projects-item--button-git ui button white size-xs fill round">Github</button>
-                <button class="portfolio__projects-item--button-demo ui button white size-xs fill round">Live Demo</button>
+            </article>
+      
+            <article class="project-card" style="margin-left: 20px;">
+              <div class="project-border">
+                <div class="project-content">
+                  <h3 class="project-title">Gym Project</h3>
+                  <div class="project-links">
+                    <a href="#" tabindex="0">Github code</a>
+                    <a href="#" tabindex="0">Demo</a>
+                  </div>
+                  <div class="project-stack">
+                    <div class="project-icon-wrapper">
+                      <img loading="lazy" src="/public/images/healthicons--gym.svg" alt="Technology icon" class="tech-icon"/>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="portfolio__projects-item frontendcolumn_border">
-              <p class="ui text size-textlg">Gym.Project</p>
-              <div class="portfolio__projects-item--image-container">
-                <img class="portfolio__projects-item--image" src="/public/images/gym_project.png"/>
+            </article>
+      
+            <article class="project-card" style="margin-left: 20px;">
+              <div class="project-border">
+                <div class="project-content">
+                  <h3 class="project-title">Elaion Barbalias</h3>
+                  <div class="project-links">
+                    <a href="#" tabindex="0">Github code</a>
+                    <a href="#" tabindex="0">Demo</a>
+                  </div>
+                  <div class="project-stack">
+                    <div class="project-icon-wrapper">
+                      <img loading="lazy" src="/public/images/elaion_barbalias.png" alt="Technology icon" class="tech-icon"/>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="portfolio__projects-item--button-list">
-                <button class="portfolio__projects-item--button-git ui button white size-xs fill round">Github</button>
-                <button class="portfolio__projects-item--button-demo ui button white size-xs fill round">Live Demo</button>
-              </div>
-            </div>
-            <div class="portfolio__projects-item frontendcolumn_border">
-              <p class="ui text size-textlg">The Book Project</p>
-              <div class="portfolio__projects-item--image-container">
-                <img class="portfolio__projects-item--image" src="/public/images/the-book-project.png"/>
-              </div>
-              <div class="portfolio__projects-item--button-list">
-                <button class="portfolio__projects-item--button-git ui button white size-xs fill round">Github</button>
-                <button class="portfolio__projects-item--button-demo ui button white size-xs fill round">Live Demo</button>
-              </div>
-            </div>
+            </article>
           </div>
         </div>
-      </div>
+      </section>
       
        <!-- interests section -->
         <div class="portfolio__interests">
@@ -283,19 +303,13 @@ Passionate about web and Android development, I enjoy creating applications that
            </div>
 
            <!-- footer section -->
-            <div class="portfolio__follow">
-              <label class="portfolio__follow-input ui input gray_800 size-xs fill round">
-                <input name="FollowMeEdit" placeholder="Follow me" type="text" />
-                <img src="public/images/codicon--github-inverted.svg" alt="Mdi:github" class="mdigithub" />
-                <img src="public/images/mdi--linkedin.svg" alt="Mdi:github" class="mdigithub" />
-                <img src="public/images/ic--round-email.svg" alt="Mdi:github" class="mdigithub" />
-              </label>
-              <p class="portfolio__copyright ui text size-textxs">vaggelis_barb &copy 2024</p>
-            </div>
-
+           <footer class="footer">
+            <span class="footer-text">Follow me</span>
+            <img src="https://cdn.builder.io/api/v1/image/assets/b72b2cf2bfe04a6d8359b2c1a11fc7d9/7b813f400e83b4b1461cebe43ee8ede40853ab86d0c424c7ded42a68b43f436f?apiKey=b72b2cf2bfe04a6d8359b2c1a11fc7d9&" alt="Social media links"  class="footer-social-icon">
+          </footer>
+          <p class="copyright">vaggbarb © 2024</p>
         </div>
-
-     </div>
+      </main>
   </div>
 
   <script src="/javascript/page/portfolio.js"></script>

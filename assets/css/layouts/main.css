@@ -1,15 +1,10 @@
 /* Main CSS file (imports all other files) */
-@import '../base/font.css';
-@import '../base/components.css';
-@import '../components/footer.css';
-@import '../components/intro.css';
-@import '../components/profile.css';
+@import '../base/global.css';
+@import '../components/components.css';
 @import '../layouts/ExamplesPortfolio.css';
-@import '../layouts/index.css';
-@import '../sections/education.css';
+@import '../layouts/layout.css';
 @import '../sections/experience.css';
 @import '../sections/interests.css';
 @import '../sections/skills.css';
 @import '../sections/social-links.css';
 @import '../sections/technologies.css';
-@import '../utils/styles.css';

@@ -51,6 +51,7 @@
 
 
 .portfolio__actions {
+    margin-top: 60px;
     align-self: stretch;
     display: flex;
     align-items: flex-start;

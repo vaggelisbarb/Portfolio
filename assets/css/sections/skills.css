@@ -1,3 +1,5 @@
+/* Base styles for all screens */
+
 .portfolio__projects {
     margin: 120px 24px 54px 24px;
     padding: 0px 56px 0px 56px;
@@ -5,10 +7,6 @@
     display: flex;
     justify-content: stretch;
     align-items: center;
-    @media only screen and (max-width: 1440px) {
-        flex-direction: column;
-        margin-left: 0px;
-    }
 }
 
 .portfolio__projects-intro {
@@ -20,38 +18,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    @media only screen and (max-width: 1440px) {
-        width: 70%;
-        padding-left: 42px;
-
-    }
-    @media only screen and (max-width: 1050px) {
-        padding-left: 0px;
-        margin-left: 0px;
-        flex-direction: column;
-    }
-    @media only screen and (max-width : 550px) {
-        width: 50%;
-        flex-direction: column;
-        margin-left: 0px;
-        justify-content: center;
-    }
 }
 
 .portfolio__projects-title {
     color: var(--gray_300) !important;
     font-family: Raleway !important;
     line-height: 70px;
-    @media only screen and (max-width: 2100px) {
-        
-    }
-    @media only screen and (max-width: 1050px) {
-        margin-left: 0px;
-        font-size: 40px;
-    }
-    @media only screen and (max-width: 550px) {
-        font-size: 34px;
-    }
 }
 
 .portfolio__projects-list {
@@ -59,18 +31,7 @@
     margin-right: 56px;
     align-self: center;
     display: flex;
-    @media only screen and (max-width: 2100px) {
-        gap: 50px;
-        flex-wrap: wrap;
-    }
-    @media only screen and (max-width: 1050px) {
-        width: 85%;
-        align-items: center;
-        margin-top: 50px;
-    }
-    @media screen and (max-width:550px) {
-        gap: 50px;
-    }
+    flex: 1;
 }
 
 .portfolio__projects-item {
@@ -112,9 +73,6 @@
     height: 576px;
     width: 34%;
     object-fit: contain;
-    @media only screen and (max-width: 1050px) {
-        width: 100%;
-    }
 }
 
 .portfolio__skills-content {
@@ -125,19 +83,6 @@
     width: 100%;
     flex-direction: row;
     align-items: center;
-    @media only screen and (max-width: 1440px) {
-        padding-left: 32px;
-    }
-
-    @media only screen and (max-width: 1050px) {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    @media only screen and (max-width: 550px) {
-        padding-left: var(--space-xl);
-        padding-right: var(--space-xl);
-    }
 }
 
 .portfolio__skills-slider {
@@ -386,4 +331,84 @@
     height: 52px;
     width: 10%;
     object-fit: contain;
+}
+
+
+
+/* Large Screens (1440px and above) */
+@media only screen and (min-width: 1440px) {
+    .portfolio__projects-list {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* Smaller Screens (1050px to 1439px) */
+@media only screen and (max-width: 1439px) and (min-width: 1050px) {
+    .portfolio__projects {
+        flex-direction: column;
+        margin-left: 0px;
+    }
+
+    .portfolio__projects-intro {
+        width: 70%;
+        padding-left: 42px;
+    }
+
+    .portfolio__skills-content {
+        padding-left: 32px;
+    }
+}
+
+/* Phones (Max 1050px) */
+@media only screen and (max-width: 1049px) {
+    .portfolio__projects-intro {
+        padding-left: 0px;
+        margin-left: 0px;
+        flex-direction: column;
+    }
+
+    .portfolio__projects-title {
+        margin-left: 0px;
+        font-size: 40px;
+    }
+
+    .portfolio__projects-list {
+        width: 85%;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .portfolio__skills-image {
+        width: 100%;
+    }
+
+    .portfolio__skills-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Extra Small Phones (Max 550px) */
+@media only screen and (max-width: 549px) {
+    .portfolio__projects-intro {
+        width: 50%;
+        flex-direction: column;
+        margin-left: 0px;
+        justify-content: center;
+    }
+
+    .portfolio__projects-title {
+        font-size: 34px;
+    }
+
+    .portfolio__projects-list {
+        gap: 50px;
+    }
+
+    .portfolio__skills-content {
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+    }
 }
