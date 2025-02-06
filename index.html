@@ -13,72 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper.min.css"/>
   <link rel="stylesheet" type="text/css" href="./assets/css/layouts/main.css">
   <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.6/swiper-bundle.min.js" defer></script>  
-  <script>
-    async function handleSlider() {
-      const slider = document.querySelector("#slider");
 
-      // Wait for all content to load before setting maxWidth
-      const imageList = slider.querySelectorAll("img");
-      const onLoadPromiseList = [];
-      for (const image of imageList) {
-        if (image.complete) continue;
-
-        const onLoadPromise = new Promise( (resolve, reject) => {
-          if (ima.complete) return resolve();
-          image.onload = resolve;
-          image.onerror = resolve;
-        });
-        onLoadPromiseList.push(onLoadPromise);
-      }
-      await Promise.all(onLoadPromiseList);
-
-
-      slider.style.maxWidth = getComputedStyle(slider).width;
-      slider.style.maxHeight = getComputedStyle(slider).height;
-
-      const sliderParent = slider.parentElement;
-      const sliderTrack = document.querySelector("#slider > .swiper-wrapper");
-      const slides = document.querySelectorAll("#slider > .swiper-wrapper > .swiper-slide");
-
-      const slideToShow = 1;
-      const slidesRequired = 2;
-      for (let i = 0; slides.length <= slideToShow && i <= slidesRequired - 1; i++) {
-        const index = i % slideToShow;
-        const clone = slides[index]?.cloneNode(true);
-        clone?.setAttribute("cloned", "");
-        sliderTrack.appendChild(clone);
-      }
-
-      const swiper = new Swiper("#slider", {
-        grabCursor: true,
-        loop: true, 
-        slidesOffsetAfter: 0,
-        slidesOffsetBefore: 0, 
-        slidesPerView: 1,
-        pagination: {
-          el: "#slider-pagination",
-          clickable: true,
-          bulletElement: "div",
-        },
-        breakpoints: {
-          0: { slidesPerView: 1 },
-          551: { slidesPerView: 1 },
-          1051: { slidesPerView: 1 },
-          1441: { slidesPerView: 1 },
-        },
-      });
-
-
-    }
-  
-    document.addEventListener("DOMContentLoaded", async () => {
-      try {
-        await handleSlider();
-      } catch (error) {
-        console.error(error);
-      }
-    });
-  </script>
 
 </head>
 <body>
@@ -134,6 +69,7 @@ Passionate about web and Android development, I enjoy creating applications that
         <h2 class="projects-heading">Browse my projects</h2>
         <div class="projects-grid">
           <div class="projects-row">
+
             <article class="project-card">
               <div class="project-border">
                 <div class="project-content">
@@ -151,7 +87,7 @@ Passionate about web and Android development, I enjoy creating applications that
               </div>
             </article>
       
-            <article class="project-card" style="margin-left: 20px;">
+            <article class="project-card">
               <div class="project-border">
                 <div class="project-content">
                   <h3 class="project-title">Gym Project</h3>
@@ -168,7 +104,7 @@ Passionate about web and Android development, I enjoy creating applications that
               </div>
             </article>
       
-            <article class="project-card" style="margin-left: 20px;">
+            <article class="project-card">
               <div class="project-border">
                 <div class="project-content">
                   <h3 class="project-title">Elaion Barbalias</h3>

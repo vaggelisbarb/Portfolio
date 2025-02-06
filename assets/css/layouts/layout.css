@@ -74,11 +74,16 @@ select:focus-visible {
 }
 
 .content-wrapper {
-    align-self: center;
-    display: flex;
-    width: 90%;
-    max-width: 1341px;
-    flex-direction: column;
+    .content-wrapper {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        max-width: 1341px;
+        text-align: center; /* Ensure text is centered */
+    }
 }
 
 .navigation-bar {
@@ -296,7 +301,31 @@ select:focus-visible {
     width: 55%; /* Adjust the width of the text */
     color: var(--gray-400, #6f6f6f);
     margin-top: 28px;
-    font: 300 24px/48px Raleway, sans-serif;
+    font: 300 48px Raleway, sans-serif;
+}
+
+.portfolio__actions {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+}
+
+.portfolio__button--download-cv {
+    color: var(--gray_900) !important;
+    transition: 
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    padding-left: 34px;
+    padding-right: 34px;
+    background-color: var(--white);
+    height: 46px;
+    border-radius: 22px;
+    margin: 0 10px; /* Space between buttons */
+}
+
+.portfolio__button--download-cv:hover {
+    background-color: var(--deep_purple_a700) !important;
+    color: var(--white) !important;
 }
 
 .projects-container {
@@ -395,6 +424,33 @@ select:focus-visible {
     color: var(--purple-500, #9c73ff);
 }
 
+.portfolio__experience-link {
+    padding-left: 34px;
+    padding-right: 34px;
+    align-self: center;
+    flex: 1;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.portfolio__experience-link-row {
+    margin-bottom: 8px;
+    width: 28%; /* Row width for larger screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+}
+
+.portfolio__experience-link-text {
+    color: var(--purple_300) !important;
+    font-weight: 500 !important;
+}
+
+
+
 @media (max-width: 991px) {
     .projects-heading {
         font-size: 40px;
@@ -410,9 +466,26 @@ select:focus-visible {
     }
 }
 
-
-
 /* Media Queries */
+/* --- Tablet View (max-width: 1440px) --- */
+@media only screen and (max-width: 1440px) {
+    .portfolio__experience-link {
+        padding-left: var(--space-xl);
+        padding-right: var(--space-xl);
+        padding-bottom: var(--space-xl);
+        margin-left: var(--space-xl);
+        flex-direction: row; /* Keep rows horizontal */
+    }
+
+    .portfolio__experience-link-row {
+        margin-left: 20px;
+        width: 20%; /* Reduce width on tablet screens */
+    }
+    .portfolio__actions {
+        margin-top: 100px;
+    }
+}
+
 @media (max-width: 991px) {
     .screen-container {
         border-radius: var(--radius-lg);
@@ -425,6 +498,7 @@ select:focus-visible {
     }
   
     .navigation-bar {
+        border-radius: var(--radius-lg);
         padding: 0 20px;
     }
   
@@ -446,6 +520,7 @@ select:focus-visible {
   
     .project-container {
         margin-top: 40px;
+        margin-bottom: 40px;
         padding: 20px;
     }
   
@@ -471,7 +546,79 @@ select:focus-visible {
         width: 100%; /* Ensure text takes full width on small screens */
         text-align: center; /* Optional: center the text on small screens */
     }
+
+    .portfolio__experience-link-row {
+        width: 22%; /* Adjust row width for medium screens */
+    }
 }
+
+@media (max-width: 768px) {
+    .navigation-bar {
+        border-radius: var(--radius-sm);
+        padding: 0 20px;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0 20px; /* Adds some padding to prevent content from touching edges */
+        text-align: center;
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items at the center */
+        padding: 10px; /* Optional padding for better spacing */
+      }
+
+    .projects-heading {
+        font-size: 36px; /* Adjust heading size for smaller screens */
+        text-align: center;
+    }
+
+    .projects-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .project-card {
+        width: 90%; /* Ensures the cards take most of the screen width */
+        text-align: center;
+    }
+
+    .portfolio__actions {
+        margin-top: 50px;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons horizontally */
+        justify-content: center; /* Center buttons vertically */
+    }
+
+    .portfolio__button--download-cv {
+        margin: 10px 0; /* Space between buttons in mobile view */
+    }
+
+    .portfolio__experience-link {
+        flex-direction: column; /* Stack rows vertically */
+        align-items: center; /* Center align the items */
+        justify-content: center; /* Center vertically */
+    }
+
+    .portfolio__experience-link-row {
+        width: 80%; /* Increase width on mobile screens */
+        margin-bottom: var(--space-lg); /* Add bottom margin between rows */
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
 
 /* Border Styles */
 .frontendcolumn_border {

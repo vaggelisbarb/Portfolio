@@ -50,37 +50,6 @@
 }
 
 
-.portfolio__actions {
-    margin-top: 60px;
-    align-self: stretch;
-    display: flex;
-    align-items: flex-start;
-    @media only screen and (max-width: 550px) {
-        flex-direction: column;
-    }
-}
-
-.portfolio__button--download-cv {
-    color: var(--gray_900) !important;
-    transition: 
-        background-color 0.3s ease-in-out,
-        color 0.3s ease-in-out;
-    padding-left: 34px;
-    padding-right: 34px;
-    background-color: var(--white);
-    height: 46px;
-    border-radius: 22px ; 
-}
-
-.portfolio__button--download-cv:hover {
-    background-color: var(--deep_purple_a700 ) !important;
-    color: var(--white) !important;
-    transition: 
-        background-color 0.3s ease-in-out,
-        color 0.3s ease-in-out;
-
-}
-
 .portfolio__pager-indicator {
     margin-left: 86px;
     display: flex;
