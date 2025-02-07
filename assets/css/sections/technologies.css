@@ -1,13 +1,3 @@
-.portfolio__technologies {
-    margin-top: 316px;
-    padding-left: 56px;
-    padding-right: 56px;
-    gap: 234px;
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-    align-items: center;
-}
 
 @media only screen and (max-width: 1440px) {
     .portfolio__technologies {
@@ -31,15 +21,7 @@
     }
 }
 
-.portfolio__technologies-intro {
-    margin-top: 120px;
-    margin-left: 20px;
-    margin-right: 20px;
-    gap: 50px;
-    display: flex;
-    width: 100%; /* Ensure it's fully stretched */
-    flex-direction: column;
-}
+
 
 @media only screen and (max-width: 1440px) {
     .portfolio__technologies-intro {
@@ -60,11 +42,7 @@
     }
 }
 
-.portfolio__technologies-title {
-    color: var(--gray_300) !important;
-    font-family: Raleway !important;
-    line-height: 70px;
-}
+
 
 @media only screen and (max-width: 1050px) {
     .portfolio__technologies-title {
@@ -79,14 +57,7 @@
     }
 }
 
-.portfolio__technologies-list {
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 80px;
-    width: 100%; /* Stretch to full width */
-}
+
 
 @media only screen and (max-width: 1050px) {
     .portfolio__technologies-list {
@@ -94,18 +65,7 @@
     }
 }
 
-.portfolio__technologies-item--frontend,
-.portfolio__technologies-item--devops,
-.portfolio__technologies-item--languages {
-    gap: var(--space-xl);
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 26px 34px;
-    border-radius: var(--radius-xs);
-    width: 22%; /* Maintain layout */
-}
+
 
 @media only screen and (max-width: 1050px) {
     .portfolio__technologies-item--frontend,
@@ -123,27 +83,6 @@
     }
 }
 
-.portfolio__technologies-links,
-.portfolio__technologies-links--languages,
-.portfolio__technologies-list--devops {
-    margin-bottom: 8px;
-    gap: var(--space-lg);
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-}
-
-.portfolio__technologies-link--nodejs,
-.portfolio__technologies-link--reactjs,
-.portfolio__technologies-link--java {
-    gap: var(--space-lg);
-    display: flex;
-    align-items: center;
-}
-
-.portfolio__technologies-icon--user-nodejs {
-    height: 34px;
-}
 
 @media only screen and (max-width: 1050px) {
     .portfolio__technologies-list--devops {

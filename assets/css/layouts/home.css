@@ -1,0 +1,395 @@
+/*  * ----------------
+    * Home Page Layout
+    * ---------------- */
+    
+/* Profile Section */
+.profile-image {
+    width: 40%; /* Adjust width as necessary */
+    object-fit: cover; /* Ensures the image is nicely cropped */
+}
+
+.profile-overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Aligns text to the left and image to the right */
+    gap: 20px; /* Space between text and image */
+    flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
+}
+
+.profile-description {
+    width: 55%; /* Adjust the width of the text */
+    color: var(--gray-400, #6f6f6f);
+    margin-top: 28px;
+    font: 300 48px Raleway, sans-serif;
+}
+
+
+/* Actions */
+.portfolio__actions {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+}
+
+.portfolio__button--download-cv {
+    color: var(--gray_900) !important;
+    transition: 
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    padding-left: 34px;
+    padding-right: 34px;
+    background-color: var(--white);
+    height: 46px;
+    border-radius: 22px; 
+}
+
+.portfolio__button--download-cv:hover {
+    background-color: var(--deep_purple_a700) !important;
+    color: var(--white) !important;
+    transition: 
+        background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+
+
+/* Experience */
+.portfolio__experience-link {
+    padding-left: 34px;
+    padding-right: 34px;
+    align-self: center;
+    flex: 1;
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+}
+
+.portfolio__experience-link-row {
+    margin-bottom: 8px;
+    width: 28%; /* Row width for larger screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+}
+
+.portfolio__experience-link-text {
+    color: var(--purple_300) !important;
+    font-weight: 500 !important;
+}
+
+
+/* ------------------ 
+   PROJECTS SECTION
+------------------ */
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 0 var(--space-lg);
+}
+
+.projects-heading h2 {
+    color: var(--white);
+    align-self: center;
+    font: 400 60px Raleway, sans-serif;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.projects-heading p {
+    color: var(--gray-700);
+    align-self: center;
+    font: 400 26px Raleway, sans-serif;
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.projects-grid {
+    width: 100%;
+}
+
+.projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+    justify-content: center;
+}
+
+/* Card styling */
+.project-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    border-radius: var(--radius-sm);
+    border: 2px solid var(--deep_purple_a200_01);
+    padding: var(--space-md);
+    background-color: var(--deep_purple_a200_01);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card content */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    gap: var(--space-md);
+}
+
+.project-title {
+    color: var(--black_900);
+    font: bold 22px Raleway, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Links styling */
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    font: 500 18px Raleway, sans-serif;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-links a {
+    color: var(--blue_gray_100);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-links a:hover {
+    color: var(--purple_700);
+    transform: translateY(-2px);
+}
+
+/* Stack styling */
+.project-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.project-icon-wrapper {
+    width: 120px !important;
+    height: 120px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.project-icon-wrapper:hover {
+    transform: scale(1.2);
+}
+
+.tech-icon {
+    width: 100px !important;
+    height: auto !important;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.project-icon-wrapper:hover .tech-icon {
+    opacity: 0.8;
+}
+
+
+/* Interests Section */
+.portfolio__interests {
+    margin-top: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media only screen and (max-width: 1440px) {
+        gap: 80px;
+    }
+    
+    @media only screen and (max-width: 1050px) {
+        gap: 60px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        gap: var(--space-3xl);
+    }
+}
+
+.portfolio__interest--javascript {
+    color: var(--deep_purple_a100) !important;
+    @media only screen and (max-width: 1440px) {
+        font-size: 48px;
+    }
+}
+
+.portfolio__interest--react {
+    color: var(--deep_purple_a200_01) !important;
+    @media only screen and (max-width: 1440px) {
+        font-size: 48px;
+    }
+}
+
+.portfolio__interest--coffee {
+    color: var(--deep_purple_a700) !important;
+    @media only screen and (max-width: 1440px) {
+        font-size: 48px;
+    }
+}
+
+.portfolio__interest--javascript,
+.portfolio__interest--react,
+.portfolio__interest--coffee {
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.portfolio__interest--javascript:hover {
+    transform: scale(1.1);
+    color: #ffcc00 !important; /* Bright yellow */
+    text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.8);
+}
+
+.portfolio__interest--react:hover {
+    transform: scale(1.1);
+    color: #61dafb !important; /* React blue */
+    text-shadow: 2px 2px 10px rgba(97, 218, 251, 0.8);
+}
+
+.portfolio__interest--coffee:hover {
+    transform: scale(1.1);
+    color: #6b330b !important; /* Coffee brown */
+    text-shadow: 2px 2px 10px hwb(25 2% 64% / 0.8);
+}
+
+
+/* ------------------
+    TECHNOLOGIES SECTION
+------------------ */
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xl);
+    margin: var(--space-lg) 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.portfolio__technologies-intro {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    margin-top: var(--space-4xl);
+}
+
+.portfolio__technologies-title {
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: var(--space-sm);
+    color: var(--white); /* More vibrant title color */
+}
+
+.portfolio__technologies-description {
+    font-size: 26px;
+    color: var(--gray_700);
+}
+
+/* List of Technologies */
+.portfolio__technologies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    justify-content: center;
+}
+
+/* Each section (Frontend, DevOps, Languages) */
+.portfolio__technologies-item {
+    width: 100%;
+    max-width: 300px;
+    background: var(--white);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding transition */
+}
+
+/* Section titles (Frontend, DevOps, etc.) */
+.portfolio__technologies-item h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+    color: var(--gray_900_59);
+}
+
+.portfolio__technologies-item:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+
+
+/* List styling */
+.technologies-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.technologies-list li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: var(--space-sm);
+    font-size: 20px;
+    color: var(--gray_900_03);
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+.technologies-list li:hover {
+    color: var(--white); /* Change text color on hover */
+}
+
+/* Icons */
+.tech-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transition for icon animation */
+}
+
+/* Hover effects for icons */
+.technologies-list li:hover .tech-icon {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+    filter: brightness(1.5); /* Brighten the icon */
+}
+
+
+/* Different section background colors (Frontend, DevOps, Languages) */
+.frontend {
+    background-color: var(--deep_purple_a100);
+    border-radius: var(--radius-sm);
+}
+
+.devops {
+    background-color: var(--deep_purple_a200_01);
+    border-radius: var(--radius-sm);
+}
+
+.languages {
+    background-color: var(--deep_purple_a700);
+    border-radius: var(--radius-sm);
+}

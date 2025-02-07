@@ -1,0 +1,203 @@
+
+
+/* ============================= */
+/*      🌐 Large Screens (1440px)      */
+/* ============================= */
+@media only screen and (max-width: 1440px) {
+    .container {
+        max-width: 1200px;
+        padding: 0 var(--space-md);
+    }
+
+    .profile-description {
+        font-size: 2rem;
+    }
+
+    .portfolio__technologies {
+        gap: var(--space-2xl);
+    }
+
+    .portfolio__technologies-intro {
+        gap: var(--space-xl);
+    }
+
+    .portfolio__experience-link {
+        padding: var(--space-lg);
+    }
+
+    .navigation-bar {
+        width: 460px; /* A bit smaller notch for regular desktops */
+        height: 55px;
+    }
+
+    .navigation-bar:hover {
+        width: 660px; /* Expand less on hover */
+    }
+
+    .nav-username, .nav-link {
+        font-size: 13px; /* Slightly smaller text */
+    }
+
+    .portfolio__social-link {
+        width: 19px; /* Standard size for social icons */
+    }
+}
+
+/* ============================= */
+/*      📱 Medium Screens (1050px)      */
+/* ============================= */
+@media only screen and (max-width: 1050px) {
+    .container {
+        max-width: 900px;
+    }
+
+    .profile-description {
+        font-size: 1.5rem;
+    }
+
+    .portfolio__technologies {
+        gap: var(--space-lg);
+        padding: 0 var(--space-md);
+    }
+
+    .portfolio__technologies-intro {
+        gap: var(--space-lg);
+    }
+
+    .portfolio__technologies-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio__technologies-item--frontend,
+    .portfolio__technologies-item--devops,
+    .portfolio__technologies-item--languages {
+        width: 100%;
+        padding: var(--space-md);
+    }
+
+    .profile-description {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigation-bar {
+        width: 400px; /* Narrower notch on tablets */
+        height: 50px;
+    }
+
+    .navigation-bar:hover {
+        width: 600px;
+    }
+
+    .nav-username, .nav-link {
+        font-size: 12px; /* Smaller text */
+    }
+
+    .portfolio__social-link {
+        width: 18px; /* Smaller social icons */
+    }
+}
+
+/* ============================= */
+/*      📲 Tablet Screens (768px)      */
+/* ============================= */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .profile-description {
+        font-size: 1.4rem;
+    }
+
+    .portfolio__technologies {
+        gap: var(--space-lg);
+    }
+
+    .portfolio__technologies-intro {
+        gap: var(--space-md);
+    }
+
+    .portfolio__experience-link {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-overview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 70%;
+        margin-top: var(--space-lg);
+    }
+}
+
+/* ============================= */
+/*      📳 Mobile Screens (550px)      */
+/* ============================= */
+@media only screen and (max-width: 550px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .profile-description {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .portfolio__technologies {
+        gap: var(--space-md);
+    }
+
+    .portfolio__technologies-intro {
+        gap: var(--space-sm);
+    }
+
+    .portfolio__technologies-title {
+        font-size: 1.4rem;
+    }
+
+    .portfolio__experience-link {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio__button--download-cv {
+        width: 100%;
+    }
+
+    .portfolio__experience-link-row {
+        width: 90%;
+    }
+
+    .portfolio__technologies-item--frontend,
+    .portfolio__technologies-item--devops,
+    .portfolio__technologies-item--languages {
+        padding: var(--space-md);
+    }
+
+    .navigation-bar {
+        width: 180px; /* Smaller initial width */
+        height: 60px; /* Maintain height */
+    }
+
+    .navigation-bar:hover {
+        width: 380px;
+        height: 60px;
+    }
+
+    .nav-items {
+        gap: 10px; /* Adjusted gap on mobile */
+    }
+
+    .nav-username, .nav-link {
+        font-size: 12px; /* Smaller text on mobile */
+    }
+
+    .portfolio__social-link {
+        width: 16px; /* Smaller social icons */
+    }
+}

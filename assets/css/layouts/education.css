@@ -1,0 +1,67 @@
+/* Education Overview */
+.page-title {
+    color: var(--white, #fff);
+    margin-top: 170px;
+    font: 500 75px Raleway, sans-serif;
+}
+
+.degree-title {
+    color: #fff;
+    margin-top: 39px;
+    font: 500 32px Raleway, sans-serif;
+}
+
+.university-name {
+    color: #fff;
+    margin-top: 7px;
+    font: 200 24px/2 Raleway, sans-serif;
+}
+
+.education-description {
+    color: var(--gray-400, #6f6f6f);
+    margin-top: 28px;
+    font: 300 24px/48px Raleway, sans-serif;
+}
+
+.quote-section {
+    text-align: center;
+    align-content: center;
+}
+
+.quote-block {
+    color: rgba(198, 154, 255, 1);
+    text-align: center;
+    margin-top: 281px;
+    font: 600 50px Raleway, sans-serif;
+}
+
+.quote-author {
+    color: rgba(97, 4, 214, 1);
+    text-align: center;
+    margin-top: 45px;
+    font: 600 50px Raleway, sans-serif;
+}
+
+
+
+/* My Thesis Section */
+.project-container {
+    border-radius: 12px;
+    border: 1px solid var(--gray-gradient, #232323);
+    margin-top: 170px;
+    padding: 69px 80px;
+    font-family: Nunito, sans-serif;
+}
+
+.project-description {
+    color: var(--white, #fff);
+    font-size: 28px;
+}
+
+.project-features {
+    margin-top: 38px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

@@ -1,70 +1,80 @@
-/* global.css - Contains global styles, fonts, and utility classes */
+/*  * -----------------------------
+    * Styles, fonts, and utilities
+    * ----------------------------- */
 
-/* Basic */
-.ui.button.round {
-    border-radius: var(--radius-sm);
+
+/* ------------------
+    GLOBAL STYLES
+ ------------------ */
+ body {
+    font-size: var(--font-size-base);
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    line-height: 1.6;
 }
 
-.ui.button.size-xs {
-    height: 46px;  
-    padding-left: 34px;
-    padding-right: 34px;
-    font-size: 16px;
+* {
+    box-sizing: border-box;
+    line-height: normal;
+    font-family: inherit;
+    margin: unset;
 }
 
-.ui.button.fill.white {
-    background-color: var(--white);
-    color: var(--gray_900);
+input {
+    background-color: transparent;
+    width: 100%;
 }
 
-.ui.button {
-    text-align: center;
-    display: flex;
-    cursor: pointer;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    color: var(--gray_900);
-    font-size: 16px;
-    font-weight: 700;
-    background-color: var(--white);
-    min-width: 184px;
-    border-radius: var(--radius-sm);
-    @media only screen and (min-width: 1440px) {
-        font-size: 13px;
-    }
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.ui.input.round {
-    border-radius: var(--radius-lg);
+a {
+    text-decoration: none;
+    display: block;
 }
 
-.ui.input.size-xs {
-    height: 90px;
-    padding-left: var(--space-sm);
-    padding-right: 170px;
-    font-size: 26px;
+[type="text"],
+input:where(:not([type])),
+[type="email"],
+[type="url"],
+[type="password"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="week"],
+[multiple],
+textarea,
+select,
+button {
+    appearance: none;
+    background-color: transparent;
+    border-color: unset;
+    border-width: 0;
+    border-radius: unset;
+    padding-left: 40px;
+    font-size: unset;
+    line-height: unset;
+    color: inherit;
 }
 
-.ui.input.fill.gray_800 {
-    background-color: var(--gray_800);
-    color: var(--gray_400);
+input:focus-visible,
+[multiple]:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: none;
 }
 
-.ui.input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: text;
-    color: var(--gray_400);
-    font-size: 26px;
-    gap:var(--space-xl);
-    background-color: var(--gray_800);
-    align-self: stretch;
-    border-radius: var(--radius-lg);
-}
 
+
+/* --------------------
+    TEXT UTILITIES
+--------------------- */
 .ui.text.size-textxs {
     font-size: 16px;
     font-weight: 400;
@@ -189,7 +199,9 @@
     font-family: Raleway;
 }
 
-/* Font imports */
+/* -----------
+    FONTS 
+------------ */
 @font-face {
     font-display: swap;
     font-style: normal;
@@ -271,7 +283,9 @@
     font-weight: 300;
 }
 
-/* Global Variables */
+/* --------------
+    VARIABLES
+-------------- */
 :root {
     --black_900: #0A080F;
     --blue_gray_100: #D9D9D9;
@@ -311,21 +325,81 @@
     --teal_50:#D8E5F8;
     --white:#FFFFFF;
 
+    --font-size-base: 16px; /* Set a base font size */
+
     --radius-xs: 12px;
     --radius-sm: 22px;
     --radius-md: 34px;
     --radius-lg: 44px;
     --radius-xl: 60px;
     --radius-2xl: 100px;
-    --radius-3xl: 200px
+    --radius-3xl: 200px;
 
     --space-xs: 10px;
-    --space-sm: 12px;
-    --space-md: 13px;
-    --space-lg: 14px;
-    --space-xl: 16px;
-    --space-2xl: 30px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
     --space-3xl: 40px;
+    --space-4xl: 150px;
+
+
+}
+
+
+/* Border Styles */
+.frontendcolumn_border {
+    backdrop-filter: blur(1px);
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #232323, #424242, #232323);
+        background-clip: border-box;
+        mask:
+            linear-gradient(#fff 0 0) padding-box,
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude !important;
+        z-index: -10;
+        border-radius: 12px;
+        border: 3px solid transparent;
+    }
+}
+
+.languagescolumn_border {
+    backdrop-filter: blur(1px);
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #232323, #424242, #232323);
+        background-clip: border-box;
+        mask:
+            linear-gradient(#fff 0 0) padding-box,
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude !important;
+        z-index: -10;
+        border-radius: 12px;
+        border: 3px solid transparent;
+    }
+}
+
+.projectscolumn_border {
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #232323, #424242, #232323);
+        background-clip: border-box;
+        mask:
+            linear-gradient(#fff 0 0) padding-box,
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude !important;
+        z-index: -10;
+        border-radius: 12px;
+        border: 3px solid transparent;
+    }
 }
 
 .flex-col-center-start {

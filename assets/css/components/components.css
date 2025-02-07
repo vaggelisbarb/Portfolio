@@ -1,94 +1,33 @@
-/* Footer Styles */
-.portfolio__follow {
-    gap: var(--space-2xl);
+/*  * ------------
+    * Components
+    * ------------ */
+
+    
+/* ---------------
+    BACKGROUND
+--------------- */
+.examples-portfolio {
+    gap: 50px;
+    background-color: var(--black_900);
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: flex-start;
-}
-
-.portfolio__follow-input {
-    columns: var(--gray_400) !important;
-    background-color: var(--gray_800) !important;
-    height: 90px;
-    border-radius: 44px !important;
-}
-
-.mdigithub {
-    height: 32px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    width: 32px;
-    object-fit: contain;
-}
-
-.portfolio__copyright {
-    margin-left: 70px;
-    font-weight: 300 !important;
-}
-
-/* Intro Styles */
-.portfolio__intro {
-    display: flex;
-    align-items: flex-start;
-}
-
-.portfolio__intro-text {
-    gap: var(--space-2xl);
-    align-self: center;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* Profile Styles */
-.portfolio__profile {
-    margin-top: 28px;
-    margin-left: 200px;
-    margin-right: 200px;
-    gap: 170px;
-    display: flex;
-    align-self: stretch;
-    flex-direction: column;
-}
-
-.portfolio__profile-info {
-    margin-left: 184px;
-    margin-right: 184px;
-    gap: 42px;
-    display: flex;
-    background-color: var(--gray_900_59);
-    justify-content: center;
     align-items: center;
-    padding: 28px;
-    border-radius: var(--radius-md);
+    padding: 44px;
+
+    @media only screen and (max-width: 1050px) {
+        padding: 20px;
+    }
+
+    @media only screen and (max-width: 550px) {
+        padding: var(--space-xl);
+    }
 }
 
-.portfolio__profile-info-row {
-    width: 100%;
-    margin-right: 0px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
-.portfolio__name {
-    color: var(--white) !important;
-}
-
-.portfolio__description {
-    color: var(--gray_400) !important;
-    font-family: Raleway !important;
-    width: 72%;
-    line-height: 48px;
-}
-
-.portfolio__greeting {
-    color: var(--white) !important;
-}
-
+/* ---------------
+    MAIN TITLE
+--------------- */
 .title {
     margin-top: 44px;
     margin-left: auto;
@@ -112,58 +51,44 @@
     font-family: Raleway !important;
 }
 
+/* ----------------------
+    PHONE SCREEN FRAME
+------------------------ */
+/* Screen Container */
+.screen-container {
+    border-radius: var(--radius-2xl);
+    background-color: var(--gray_900); /* Background color */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 2100px; /* Ensure max width */
+    padding: 30px 80px 0; /* Adds padding to the top */
+    position: relative; /* Allows positioning of child elements (notch, etc.) */
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1341px; /* Set a max width for better control */
+    text-align: center; /* Ensure text is centered */
+    z-index: 5; /* Ensure it's on top of the background */
+}
+
+
+
 /* MEDIA QUERIES - Placed at the bottom */
 @media only screen and (max-width: 1440px) {
-    .portfolio__profile {
-        gap: 127px;
-    }
-    
-    .portfolio__description {
-        width: 100%;
-    }
-
-    .portfolio__greeting {
-        font-size: 48px;
-    }
-
     .title__name {
         font-size: 48px;
     }
 }
 
 @media only screen and (max-width: 1050px) {
-    .portfolio__follow {
-        width: 100%;
-    }
-
-    .portfolio__copyright {
-        margin-left: 0px;
-    }
-
-    .portfolio__intro {
-        flex-direction: column;
-    }
-
-    .portfolio__intro-text {
-        align-self: stretch;
-    }
-
-    .portfolio__profile {
-        gap: 127px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .portfolio__profile-info {
-        flex-direction: column;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .portfolio__profile-info-row {
-        width: 100%;
-    }
-
     .title__subtitle {
         font-size: 34px;
         margin-left: 0px;
@@ -171,20 +96,6 @@
 }
 
 @media only screen and (max-width: 550px) {
-    .portfolio__profile {
-        gap: 25px;
-    }
-
-    .portfolio__profile-info {
-        gap: 20px;
-        padding: 0px;
-    }
-
-    .portfolio__profile-info-row {
-        width: 50%;
-        justify-content: center;
-    }
-
     .title__subtitle {
         font-size: 32px;
     }

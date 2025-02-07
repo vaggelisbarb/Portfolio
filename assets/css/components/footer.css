@@ -1,0 +1,80 @@
+/* Footer Section */
+.footer {
+    width: 100%;
+    border-radius: 100px;
+    background: var(--gray-800, #131313);
+    margin-top: 150px;
+    padding: 28px 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards; /* Animation for footer */
+}
+
+.footer-text {
+    color: var(--gray-400, #6f6f6f);
+    font: 400 26px Nunito, sans-serif;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards; /* Animation for footer text */
+    animation-delay: 0.2s; /* Delay for text */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px; /* Space between icons */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards; /* Animation for icons */
+    animation-delay: 0.4s; /* Delay for icons */
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+    padding: 8px; /* Add padding to make space for the SVG */
+}
+
+.social-icon-img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.social-icon:hover .social-icon-img {
+    opacity: 0.8;
+}
+
+/* Copyright section */
+.copyright {
+    color: #fff;
+    font: 300 16px/28px Nunito, sans-serif;
+    margin: 28px 0 0 70px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.6s; /* Delay for copyright text */
+}
+
+/* Animation for Fade-In and Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

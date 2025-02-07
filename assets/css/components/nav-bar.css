@@ -1,0 +1,128 @@
+.navigation-bar {
+    position: absolute;
+    top: 30px; /* Slightly inside the screen-container */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px; /* Initial width */
+    height: 60px; /* Notch height */
+    background: rgba(30, 30, 30, 0.9); /* Dark, semi-transparent */
+    border-radius: 30px; /* Rounded edges */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: all 0.3s ease-in-out;
+    z-index: 10; /* Ensure it stays on top */
+}
+
+/* Hover Effect - Expands horizontally */
+.navigation-bar:hover {
+    width: 720px; /* Expands on hover */
+    background: rgba(50, 50, 50, 0.95); /* Slightly lighter */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation Items */
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Default gap between items */
+}
+
+/* Username inside the notch */
+.nav-username {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease, color 0.3s ease;
+}
+
+/* Show icons on hover */
+.navigation-bar:hover .nav-username {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Navigation Links */
+.nav-link {
+    color: #b292ff;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease, color 0.3s ease;
+}
+
+/* Show links on hover */
+.navigation-bar:hover .nav-link {
+    opacity: 1;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+/* Social Icons */
+.portfolio__social-link {
+    width: 20px;
+    height: auto;
+    transition: transform 0.3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Show icons on hover */
+.navigation-bar:hover .portfolio__social-link {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Nav Icons */
+.portfolio__social-links {
+    gap: 10px; /* Adjusted gap size for closer icons */
+    display: flex;
+}
+
+/* General Icon Styles */
+.portfolio__social-link {
+    height: 24px;
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    animation: none; /* Ensure no animation by default */
+}
+
+/* Hover Effects with Animation */
+.portfolio__social-link:hover {
+    animation: iconHoverAnimation 0.6s ease-in-out forwards;
+}
+
+/* Keyframes for icon hover animation */
+@keyframes iconHoverAnimation {
+    0% {
+        transform: scale(1); /* Initial size */
+        opacity: 1; /* Initial opacity */
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Initial shadow */
+    }
+    50% {
+        transform: scale(1.15); /* Slightly bigger */
+        opacity: 0.8; /* Slightly transparent */
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    }
+    100% {
+        transform: scale(1.2); /* Final enlarged size */
+        opacity: 1; /* Fully opaque */
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.5); /* Strong shadow */
+    }
+}
+
+/* Initial state (default icons, no hover) */
+.portfolio__social-link--github {
+    /* Any default styles if needed */
+}
+
+.portfolio__social-link--linkedin {
+    /* Any default styles if needed */
+}
+
+.portfolio__social-link--email {
+    /* Any default styles if needed */
+}

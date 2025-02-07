@@ -1,9 +1,9 @@
 /* Main CSS file (imports all other files) */
 @import '../base/global.css';
 @import '../components/components.css';
-@import '../layouts/ExamplesPortfolio.css';
-@import '../layouts/layout.css';
-@import '../sections/interests.css';
-@import '../sections/skills.css';
-@import '../sections/social-links.css';
-@import '../sections/technologies.css';
+@import '../components/buttons.css';
+@import '../components/footer.css';
+@import '../components/nav-bar.css';
+@import '../layouts/home.css';
+@import '../layouts/education.css';
+@import '../responsive/responsive.css';
