@@ -1,7 +1,3 @@
-downloadCV();
-redirectToGihub();
-redirectToLinkedin();
-
 function downloadCV() {
     // Implement download CV functionality here
     
@@ -19,22 +15,20 @@ function downloadCV() {
         });
 }
 
-function redirectToGihub() {
-    document.querySelector('.portfolio__social-link--github')
-        .addEventListener('click', () => {
-            console.log('GitHub img clicked');
-            window.location.href = 'https://github.com/vaggelisbarb';
-        });
+function redirectToGithub() {
+    console.log('GitHub icon clicked');
+    window.location.href = 'https://github.com/vaggelisbarb';
 }
 
 function redirectToLinkedin() {
-    document.querySelector('.portfolio__social-link--linkedin')
-        .addEventListener('click', () => {
-            console.log('LinkedIn img clicked');
-            window.location.href = 'https://www.linkedin.com/in/evangelos-barmpalias-488b3b18b/';
-        });
+    console.log('LinkedIn icon clicked');
+    window.location.href = 'https://www.linkedin.com/in/evangelos-barmpalias-488b3b18b/';
 }
 
 function openEducationPage() {
-    const portfolioContainer = document.querySelector('.portfolio');
+    window.location.href = 'education.html'; // Redirect to education.html
+}
+
+function openThesisRepo() {
+    window.location.href = 'https://github.com/vaggelisbarb/RISCV-Microprocessor';
 }

@@ -31,7 +31,7 @@
 .quote-block {
     color: rgba(198, 154, 255, 1);
     text-align: center;
-    margin-top: 281px;
+    margin-top: var(--space-4xl);
     font: 600 50px Raleway, sans-serif;
 }
 
@@ -39,6 +39,7 @@
     color: rgba(97, 4, 214, 1);
     text-align: center;
     margin-top: 45px;
+    margin-bottom: var(--space-4xl);
     font: 600 50px Raleway, sans-serif;
 }
 
@@ -46,22 +47,140 @@
 
 /* My Thesis Section */
 .project-container {
-    border-radius: 12px;
-    border: 1px solid var(--gray-gradient, #232323);
-    margin-top: 170px;
-    padding: 69px 80px;
-    font-family: Nunito, sans-serif;
+    width: 100%; /* Take up full width */
+    height: auto; /* Adjust height */
+    background: var(--deep_purple_a700);
+    margin-top: var(--space-3xl);
+    padding: var(--space-lg) var(--space-lg); /* Increase padding for more space */
+    border-radius: var(--radius-md); /* Round the corners more */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Larger shadow for better emphasis */
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, height 0.3s ease; /* Add transition for smooth effects */
+    transform: scale(1); /* Maintain normal size by default */
+}
+
+.project-container:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    height: 120%; /* Increase height on hover for more impact */
+}
+
+
+/* Styling for the project title and description */
+.project-title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: var(--space-md);
+    color: var(--white);
 }
 
 .project-description {
-    color: var(--white, #fff);
-    font-size: 28px;
+    font-size: 24px;
+    color: var(--gray-300);
+    margin-bottom: var(--space-3xl);
+    margin-top: var(--space-xl);
 }
 
-.project-features {
-    margin-top: 38px;
+/* Project image container */
+.project-icon-wrapper {
+    width: 100% !important; /* Increase width to take up more space */
+    height: 80%; /* Increase height to take up more space */
+    margin: 0 auto; /* Center the wrapper horizontally */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    overflow: hidden; /* Hide any overflow from the image */
+    border-radius: var(--radius-sm); /* Optional: rounded corners */
+    margin-bottom: var(--space-3xl);
+}
+
+/* Project image */
+.project-icon {
+    width: 100%; /* Make the image take up the full width of the wrapper */
+    height: 100%; /* Make the image take up the full height of the wrapper */
+    object-fit: fill; /* Ensure the image maintains its aspect ratio while filling the container */
+    transition: transform 0.3s ease; /* Optional: add transition for smooth scaling */
+}
+
+.project-container:hover .project-icon {
+    transform: scale(1.1);
+}
+
+/* Project Features List */
+.project-features,
+.project-languages {
+    margin-top: var(--space-md);
+    text-align: left;
+}
+
+
+.features-list,
+.languages-list {
+    margin-top: var(--space-sm);
+    list-style-type: disc;
+    padding-left: 20px;
+    color: var(--gray-300);
+}
+
+.features-list li,
+.languages-list li {
+    font-size: 20px;
+    margin-bottom: 10px;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+}
+
+.features-list li .feature-icon,
+.languages-list li .lan-icon {
+    margin-right: 10px; /* Space between icon and text */
+    width: 42px; /* Set icon size */
+    height: 54px; /* Set icon size */
+}
+
+/* GitHub Button */
+.github-link {
+    margin-top: var(--space-lg);
+}
+
+.github-button {
+    color: var(--white);
+    padding: 12px 25px; /* Increased padding for better size */
+    font-size: 18px;
+    border: none;
+    border-radius: var(--radius-lg); /* Rounded corners */
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow */
+}
+
+.github-button:hover {
+    background-color: var(--gray_400); /* Darker background on hover */
+    transform: scale(1.1); /* Slightly grow the button */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bigger shadow */
+    text-decoration: underline; /* Underline text on hover */
+}
+
+.github-button:active {
+    transform: scale(0.98); /* Slightly shrink the button on click */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Restore shadow on click */
+}
+
+/* Optional: Add a subtle pulse effect when button is focused */
+.github-button:focus {
+    outline: none;
+    animation: pulse 1.5s infinite; /* Pulse animation */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

@@ -9,7 +9,8 @@
         gap: 50px;
     }
 
-    .title {
+    .title,
+    .project-title {
         padding: 0 40px; /* Slightly more padding */
     }
 
@@ -28,7 +29,8 @@
         padding: 0 var(--space-md);
     }
 
-    .profile-description {
+    .profile-description,
+    .education-description {
         font-size: 2rem;
     }
 
@@ -61,13 +63,16 @@
         width: 19px; /* Standard size for social icons */
     }
 
-    .portfolio__interests {
+    .portfolio__interests,
+    .quote-block {
         gap: var(--space-3xl);
     }
 
     .portfolio__interest--javascript,
     .portfolio__interest--react,
-    .portfolio__interest--coffee {
+    .portfolio__interest--coffee,
+    .quote-block,
+    .quote-author {
         font-size: 2.5rem; /* Larger font size for interests */
     }
 }
@@ -81,7 +86,8 @@
         gap: 40px;
     }
 
-    .title {
+    .title,
+    .project-title {
         padding: 0 30px; /* Adjust padding */
     }
 
@@ -99,7 +105,8 @@
         max-width: 900px;
     }
 
-    .profile-description {
+    .profile-description,
+    .education-description {
         font-size: 1.5rem;
     }
 
@@ -146,7 +153,8 @@
         width: 18px; /* Smaller social icons */
     }
 
-    .portfolio__interests {
+    .portfolio__interests,
+    .quote-block {
         gap: var(--space-2xl);
     }
 }
@@ -160,7 +168,8 @@
         gap: 30px;
     }
 
-    .title {
+    .title,
+    .project-title {
         padding: 0 20px; /* Smaller padding */
         gap: 20px; /* Smaller gap between title and subtitle */
     }
@@ -179,7 +188,9 @@
         max-width: 100%;
     }
 
-    .profile-description {
+    .profile-description,
+    .education-description,
+    .project-description {
         font-size: 1.4rem;
     }
 
@@ -205,6 +216,12 @@
         width: 70%;
         margin-top: var(--space-lg);
     }
+
+    .quote-block,
+    .quote-author {
+        font-size: 2.8rem;
+        margin-bottom: var(--space-lg);
+    }
 }
 
 /* ============================= */
@@ -221,7 +238,8 @@
         padding: 0;
     }
 
-    .title {
+    .title,
+    .project-title {
         padding: 0 15px; /* Smallest padding for mobile */
         gap: 15px; /* Reduced gap */
     }
@@ -240,7 +258,9 @@
         max-width: 100%;
     }
 
-    .profile-description {
+    .profile-description,
+    .education-description,
+    .project-description {
         font-size: 1.3rem;
         text-align: center;
     }
@@ -305,6 +325,12 @@
 
     .portfolio__interests {
         gap: var(--space-xl);
+    }
+
+    .quote-block,
+    .quote-author {
+        font-size: 2.2rem;
+        margin-bottom: var(--space-sm);
     }
 
 }

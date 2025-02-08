@@ -27,18 +27,20 @@
       <div class="content-wrapper">
         <nav class="navigation-bar" role="navigation">
             <div class="nav-items">
-                <a href="#education" class="nav-link">education</a>
-                <a href="#experience" class="nav-link">experience</a>
+                <a onclick="openEducationPage(); return false;" class="nav-link education">education</a>
+                <a class="nav-link experience">experience</a>
                 <div class="portfolio__social-links">
                     <img src="public/images/codicon--github-inverted.svg" 
                          alt="Github" 
-                         class="portfolio__social-link"/>
+                         class="portfolio__social-link github-icon"
+                         onclick="redirectToGithub()"/>
                     <img src="public/images/mdi--linkedin.svg"
                          alt="LinkedIn" 
-                         class="portfolio__social-link"/>
+                         class="portfolio__social-link linkedin-icon"
+                         onclick="redirectToLinkedin()"/>
                     <img src="public/images/ic--round-email.svg"
                          alt="Email" 
-                         class="portfolio__social-link"/>
+                         class="portfolio__social-link email-icon"/>
                 </div>
             </div>
         </nav>
@@ -82,6 +84,7 @@ Passionate also about Android development, I enjoy creating applications that en
                       </div>
                   </div>
               </div>
+              <div class="under_construction-popup">Under Construction!</div>
           </article>
 
           <!-- Project 2 -->
@@ -98,6 +101,7 @@ Passionate also about Android development, I enjoy creating applications that en
                       </div>
                   </div>
               </div>
+              <div class="under_construction-popup">Under Construction!</div>
           </article>
 
           <!-- Project 3 -->
@@ -114,6 +118,7 @@ Passionate also about Android development, I enjoy creating applications that en
                       </div>
                   </div>
               </div>
+              <div class="under_construction-popup">Under Construction!</div>
           </article>
       </div>
   </div>
@@ -205,13 +210,13 @@ Passionate also about Android development, I enjoy creating applications that en
            <footer class="footer">
             <span class="footer-text">Follow me</span>
             <div class="social-icons">
-              <a href="#" class="social-icon github">
+              <a href="#" onclick="redirectToGithub(); return false;" class="social-icon">
                 <!-- GitHub SVG Image -->
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="social-icon-img">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="social-icon-img github-icon">
               </a>
-              <a href="#" class="social-icon linkedin">
+              <a href="#" onclick="redirectToLinkedin(); return false;" class="social-icon">
                 <!-- LinkedIn SVG Image -->
-                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" class="social-icon-img">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn" class="social-icon-img linkedin-icon">
               </a>
             </div>
           </footer>
