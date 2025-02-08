@@ -49,7 +49,7 @@
 .project-container {
     width: 100%; /* Take up full width */
     height: auto; /* Adjust height */
-    background: var(--deep_purple_a700);
+    background: var(--deep_purple_a200);
     margin-top: var(--space-3xl);
     padding: var(--space-lg) var(--space-lg); /* Increase padding for more space */
     border-radius: var(--radius-md); /* Round the corners more */
@@ -70,13 +70,13 @@
 /* Styling for the project title and description */
 .project-title {
     font-size: 32px;
-    font-weight: 400;
+    font-weight: bold;
     margin-bottom: var(--space-md);
     color: var(--white);
 }
 
 .project-description {
-    font-size: 24px;
+    font-size: 22px;
     color: var(--white);
     margin-bottom: var(--space-3xl);
     margin-top: var(--space-xl);

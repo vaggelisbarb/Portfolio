@@ -32,5 +32,5 @@ function openEducationPage() {
 }
 
 function openThesisRepo() {
-    window.location.href = 'https://github.com/vaggelisbarb/RISCV-Microprocessor';
+    window.open('https://github.com/vaggelisbarb/RISCV-Microprocessor', '_blank');
 }
