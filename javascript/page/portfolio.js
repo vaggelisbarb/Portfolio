@@ -1,3 +1,5 @@
+downloadCV();
+
 function downloadCV() {
     // Implement download CV functionality here
     
