@@ -2,7 +2,7 @@
 .footer {
     width: 100%;
     border-radius: 100px;
-    background: var(--gray-800, #131313);
+    background: var(--gray_300);
     margin-top: 150px;
     padding: 28px 70px;
     display: flex;
@@ -14,7 +14,7 @@
 }
 
 .footer-text {
-    color: var(--gray-400, #6f6f6f);
+    color: var(--black_900);
     font: 400 26px Nunito, sans-serif;
     opacity: 0;
     animation: fadeInUp 0.8s ease-out forwards; /* Animation for footer text */

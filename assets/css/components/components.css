@@ -10,18 +10,10 @@
     gap: 50px;
     background-color: var(--black_900);
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 44px;
-
-    @media only screen and (max-width: 1050px) {
-        padding: 20px;
-    }
-
-    @media only screen and (max-width: 550px) {
-        padding: var(--space-xl);
-    }
+    width: 100%;
 }
 
 
@@ -38,17 +30,22 @@
     flex-direction: column;
     align-items: flex-start;
     max-width: 1402px;
+    padding: 0 20px; /* Default padding */
 }
 
+/* Main Title Name */
 .title__name {
     color: var(--white) !important;
     text-align: start;
     line-height: 91px;
+    font-size: 48px; /* Default font size */
 }
 
+/* Subtitle */
 .title__subtitle {
     margin-left: 78px;
     font-family: Raleway !important;
+    font-size: 20px; /* Default font size for subtitle */
 }
 
 /* ----------------------
@@ -64,6 +61,7 @@
     max-width: 2100px; /* Ensure max width */
     padding: 30px 80px 0; /* Adds padding to the top */
     position: relative; /* Allows positioning of child elements (notch, etc.) */
+    width: 100%;
 }
 
 /* Content Wrapper */
@@ -73,30 +71,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     max-width: 1341px; /* Set a max width for better control */
     text-align: center; /* Ensure text is centered */
     z-index: 5; /* Ensure it's on top of the background */
 }
 
-
-
-/* MEDIA QUERIES - Placed at the bottom */
-@media only screen and (max-width: 1440px) {
-    .title__name {
-        font-size: 48px;
-    }
-}
-
-@media only screen and (max-width: 1050px) {
-    .title__subtitle {
-        font-size: 34px;
-        margin-left: 0px;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .title__subtitle {
-        font-size: 32px;
-    }
-}

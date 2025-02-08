@@ -3,10 +3,10 @@
 }
 
 .ui.button.size-xs {
-    height: 46px;  
-    padding-left: 34px;
-    padding-right: 34px;
-    font-size: 16px;
+    height: 60px;  
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 22px;
 }
 
 .ui.button.fill.white {

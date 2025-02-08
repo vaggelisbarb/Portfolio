@@ -6,6 +6,15 @@
 .profile-image {
     width: 40%; /* Adjust width as necessary */
     object-fit: cover; /* Ensures the image is nicely cropped */
+    filter: sepia(0%); /* Remove sepia effect on hover */
+    transition: transform 0.3s ease-in-out, 
+                filter 0.4s ease-in-out;
+
+}
+/* Hover effect */
+.profile-image:hover {
+    transform: scale(1.1) rotate(3deg); /* Slight zoom + gentle rotation */
+    filter: sepia(80%); /* Remove sepia effect on hover */
 }
 
 .profile-overview {
@@ -29,6 +38,7 @@
     display: flex;
     justify-content: center; /* Center buttons horizontally */
     align-items: center; /* Center buttons vertically */
+    margin-top: 80px; /* Space between the description and buttons */
 }
 
 .portfolio__button--download-cv {
@@ -36,11 +46,6 @@
     transition: 
         background-color 0.3s ease-in-out,
         color 0.3s ease-in-out;
-    padding-left: 34px;
-    padding-right: 34px;
-    background-color: var(--white);
-    height: 46px;
-    border-radius: 22px; 
 }
 
 .portfolio__button--download-cv:hover {
@@ -52,32 +57,6 @@
 }
 
 
-
-/* Experience */
-.portfolio__experience-link {
-    padding-left: 34px;
-    padding-right: 34px;
-    align-self: center;
-    flex: 1;
-    display: flex;
-    justify-content: space-between; /* Distribute items evenly */
-}
-
-.portfolio__experience-link-row {
-    margin-bottom: 8px;
-    width: 28%; /* Row width for larger screens */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--space-sm);
-    border-radius: var(--radius-sm);
-    box-sizing: border-box;
-}
-
-.portfolio__experience-link-text {
-    color: var(--purple_300) !important;
-    font-weight: 500 !important;
-}
 
 
 /* ------------------ 
@@ -198,9 +177,9 @@
     transform: scale(1.2);
 }
 
-.tech-icon {
-    width: 100px !important;
-    height: auto !important;
+.project-icon {
+    width: 100%;
+    height: auto;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -211,42 +190,23 @@
 
 /* Interests Section */
 .portfolio__interests {
-    margin-top: 78px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media only screen and (max-width: 1440px) {
-        gap: 80px;
-    }
-    
-    @media only screen and (max-width: 1050px) {
-        gap: 60px;
-    }
-
-    @media only screen and (max-width: 550px) {
-        gap: var(--space-3xl);
-    }
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-md);
 }
 
 .portfolio__interest--javascript {
     color: var(--deep_purple_a100) !important;
-    @media only screen and (max-width: 1440px) {
-        font-size: 48px;
-    }
 }
 
 .portfolio__interest--react {
     color: var(--deep_purple_a200_01) !important;
-    @media only screen and (max-width: 1440px) {
-        font-size: 48px;
-    }
 }
 
 .portfolio__interest--coffee {
     color: var(--deep_purple_a700) !important;
-    @media only screen and (max-width: 1440px) {
-        font-size: 48px;
-    }
 }
 
 .portfolio__interest--javascript,
@@ -365,8 +325,8 @@
 
 /* Icons */
 .tech-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     transition: transform 0.3s ease, filter 0.3s ease; /* Transition for icon animation */
 }

@@ -26,7 +26,7 @@
 .nav-items {
     display: flex;
     align-items: center;
-    gap: 40px; /* Default gap between items */
+    gap: 50px; /* Default gap between items */
 }
 
 /* Username inside the notch */
@@ -47,7 +47,7 @@
 /* Navigation Links */
 .nav-link {
     color: #b292ff;
-    font-size: 14px;
+    font-size: 20px;
     text-decoration: none;
     opacity: 0; /* Initially hidden */
     transition: opacity 0.2s ease, color 0.3s ease;
@@ -64,7 +64,7 @@
 
 /* Social Icons */
 .portfolio__social-link {
-    width: 20px;
+    width: 50px;
     height: auto;
     transition: transform 0.3s ease;
     opacity: 0; /* Initially hidden */
