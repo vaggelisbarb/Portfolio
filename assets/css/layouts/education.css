@@ -77,7 +77,7 @@
 
 .project-description {
     font-size: 24px;
-    color: var(--gray-300);
+    color: var(--white);
     margin-bottom: var(--space-3xl);
     margin-top: var(--space-xl);
 }
@@ -120,7 +120,7 @@
     margin-top: var(--space-sm);
     list-style-type: disc;
     padding-left: 20px;
-    color: var(--gray-300);
+    color: var(--white);
 }
 
 .features-list li,
