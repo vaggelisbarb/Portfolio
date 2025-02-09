@@ -235,18 +235,23 @@
 
     .screen-container {
         border-radius: var(--radius-md);
-        padding: 0;
+        padding: var(--space-xs) var(--space-xs);
+    }
+
+    .content-wrapper {
+        display: block;
+    }
+
+    .page-title,
+    .projects-heading h2 {
+        font-size: 3.2rem;
     }
 
     .title,
     .project-title {
+        font-size: 1.6rem;
         padding: 0 15px; /* Smallest padding for mobile */
         gap: 15px; /* Reduced gap */
-    }
-
-    .title__name {
-        font-size: 32px; /* Smaller font size for very small screens */
-        line-height: 60px; /* Adjusted line height */
     }
 
     .title__subtitle {
@@ -257,11 +262,22 @@
     .container {
         max-width: 100%;
     }
+    .education-title {
+        font-size: 2rem;
+    }
+
+    .degree-title {
+        font-size: 1.6rem;
+    }
+
+    .university-name {
+        font-size: 1.4rem;
+    }
 
     .profile-description,
     .education-description,
     .project-description {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 
@@ -274,7 +290,7 @@
     }
 
     .portfolio__technologies-title {
-        font-size: 3.2rem;
+        font-size: 2.6rem;
     }
 
     .tech-icon {
@@ -291,8 +307,16 @@
         width: 70%;
     }
 
+    .project-card {
+        height: 22rem;
+    }
+
+    .project-stack {
+        height: 150px;
+    }
+
     .project-icon {
-        width: 80% !important;
+        width: 100% !important;
     }
 
     .portfolio__technologies-item--frontend,

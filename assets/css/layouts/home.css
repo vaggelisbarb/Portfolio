@@ -181,34 +181,32 @@
 }
 
 /* Stack styling */
-.project-stack {
-    display: flex;
+.projects-stack {
+    display:flex;
     justify-content: center;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-sm) var(--space-sm);
 }
 
-.project-icon-wrapper {
-    width: 120px !important;
-    height: 120px !important;
-    display: flex;
+.projects-icon-wrapper {
     justify-content: center;
     align-items: center;
+    text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
 
-.project-icon-wrapper:hover {
+.projects-icon-wrapper:hover {
     transform: scale(1.2);
 }
 
-.project-icon {
-    width: 100%;
+.projects-icon {
+    width: 8.5rem;
     height: auto;
     transition: opacity 0.3s ease-in-out;
 }
 
-.project-icon-wrapper:hover .tech-icon {
+.projects-icon-wrapper:hover .tech-icon {
     opacity: 0.8;
 }
 

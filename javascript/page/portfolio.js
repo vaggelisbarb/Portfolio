@@ -8,8 +8,8 @@ function downloadCV() {
             console.log('Download CV button clicked');
             const link = document.createElement('a');
 
-            link.href = '../public/resume/Barbalias Evangelos_Resume_2024.pdf';
-            link.download = 'Barbalias_Evangelos_Resume_2024.pdf';
+            link.href = '../public/resume/Barbalias Evangelos_Resume_2025.pdf';
+            link.download = 'Barbalias_Evangelos_Resume_2025.pdf';
 
             document.body.appendChild(link);
             link.click();
@@ -27,8 +27,8 @@ function redirectToLinkedin() {
     window.location.href = 'https://www.linkedin.com/in/evangelos-barmpalias-488b3b18b/';
 }
 
-function openEducationPage() {
-    window.location.href = 'education.html'; // Redirect to education.html
+function openSameTabPage(htmlPage) {
+    window.location.href = htmlPage; // Redirect to page
 }
 
 function openThesisRepo() {
