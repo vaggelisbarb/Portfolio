@@ -1,26 +1,49 @@
 .navigation-bar {
     position: absolute;
-    top: 30px; /* Slightly inside the screen-container */
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 520px; /* Initial width */
-    height: 60px; /* Notch height */
-    background: rgba(30, 30, 30, 0.9); /* Dark, semi-transparent */
-    border-radius: 30px; /* Rounded edges */
+    width: 520px;
+    height: 60px;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* 3D Effect */
     transition: all 0.3s ease-in-out;
-    z-index: 10; /* Ensure it stays on top */
+    z-index: 10;
+    
+    /* Wiggle Animation */
+    animation: wiggle 1.5s ease-in-out infinite;
 }
 
-/* Hover Effect - Expands horizontally */
+/* Hover Effect - Expands with more 3D depth, stops the wiggle */
 .navigation-bar:hover {
-    width: 720px; /* Expands on hover */
-    background: rgba(50, 50, 50, 0.95); /* Slightly lighter */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    width: 720px;
+    background: rgba(50, 50, 50, 0.95);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.6);
+    transform: translateX(-50%) scale(1.05);
+    animation: none; /* Stop the wiggle animation */
 }
+
+/* Wiggle Keyframes */
+@keyframes wiggle {
+    0%, 100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    25% {
+        transform: translateX(-50%) rotate(2deg);
+    }
+    50% {
+        transform: translateX(-50%) rotate(-2deg);
+    }
+    75% {
+        transform: translateX(-50%) rotate(1deg);
+    }
+}
+
+
 
 /* Navigation Items */
 .nav-items {

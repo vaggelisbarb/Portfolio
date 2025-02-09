@@ -25,12 +25,21 @@
     flex-wrap: wrap; /* Allows the content to wrap on smaller screens */
 }
 
+.homepage-title {
+    color: var(--white, #fff);
+    margin-top: 170px;
+    font: 500 75px Raleway, sans-serif;
+}
+
 .profile-description {
-    width: 55%; /* Adjust the width of the text */
+    width: 55%;
     color: var(--gray-400, #6f6f6f);
     margin-top: 28px;
     font: 300 48px Raleway, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(0, 0, 0, 0.2); /* 3D Effect */
 }
+
+
 
 
 /* Actions */
@@ -72,17 +81,19 @@
 }
 
 .projects-heading h2 {
-    color: var(--white);
     align-self: center;
-    font: 400 60px Raleway, sans-serif;
-    margin-bottom: var(--space-xl);
     text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--white);
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3); /* Glow effect */
 }
 
 .projects-heading p {
-    color: var(--gray-700);
+    color: var(--gray_700);
     align-self: center;
-    font: 400 26px Raleway, sans-serif;
+    font: 500 26px Raleway, sans-serif;
     margin-bottom: var(--space-xl);
     text-align: center;
 }
@@ -98,38 +109,48 @@
     justify-content: center;
 }
 
-/* Card styling */
+/* Card styling with 3D effect */
 .project-card {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 300px;
-    border-radius: var(--radius-sm);
-    border: 2px solid var(--deep_purple_a200_01);
-    padding: var(--space-md);
-    background-color: var(--deep_purple_a200_01);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    position: relative; /* Allow positioning of the popup */
-
+    max-width: 320px;
+    border-radius: 12px;
+    padding: 20px;
+    background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradient for a premium look */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 
+                0 10px 30px rgba(0, 0, 0, 0.15); /* Multiple shadows for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative; /* For popup positioning */
+    text-align: center;
+    color: white;
 }
 
+/* Hover effect for a more interactive feel */
 .project-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 
+                0 15px 40px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Click effect for responsiveness */
+.project-card:active {
+    transform: translateY(3px) scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Popup Message Styling */
 .under_construction-popup {
-    display: none; /* Initially hidden */
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     color: var(--white);
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 24px;
+    border-radius: 8px;
     font-size: 18px;
     text-align: center;
     opacity: 0;
@@ -139,7 +160,7 @@
 /* Show message on hover */
 .project-card:hover .under_construction-popup {
     display: block;
-    opacity: 1; /* Fade in when hovered */
+    opacity: 1;
 }
 
 /* Card content */
@@ -149,66 +170,70 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    gap: var(--space-md);
+    gap: 12px;
 }
 
+/* Title Styling */
 .project-title {
-    color: var(--black_900);
-    font: bold 22px Raleway, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Links styling */
+/* Links Styling */
 .project-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 16px;
     width: 100%;
-    font: 500 18px Raleway, sans-serif;
+    font-weight: 500;
     transition: transform 0.3s ease-in-out;
 }
 
 .project-links a {
     color: var(--blue_gray_100);
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, transform 0.2s ease;
 }
 
 .project-links a:hover {
-    color: var(--purple_700);
-    transform: translateY(-2px);
+    color: #ffcc00;
+    transform: translateY(-3px);
 }
 
-/* Stack styling */
+/* Stack icons */
 .projects-stack {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: var(--space-sm) var(--space-sm);
+    gap: 12px;
 }
 
 .projects-icon-wrapper {
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
     transition: transform 0.3s ease-in-out;
 }
 
-
+/* Hover effect for icons */
 .projects-icon-wrapper:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(5deg);
 }
 
+/* Tech Icons */
 .projects-icon {
-    width: 8.5rem;
+    width: 90px;
     height: auto;
     transition: opacity 0.3s ease-in-out;
 }
 
-.projects-icon-wrapper:hover .tech-icon {
+.projects-icon-wrapper:hover .projects-icon {
     opacity: 0.8;
 }
+
 
 
 /* Interests Section */
@@ -258,7 +283,7 @@
 
 
 /* ------------------
-    TECHNOLOGIES SECTION
+    TECHNOLOGIES SECTION (Enhanced)
 ------------------ */
 .technologies {
     display: flex;
@@ -269,7 +294,7 @@
     align-items: center;
 }
 
-
+/* Section title */
 .portfolio__technologies-intro {
     text-align: center;
     margin-bottom: var(--space-xl);
@@ -278,17 +303,20 @@
 
 .portfolio__technologies-title {
     font-size: 60px;
-    font-weight: 400;
+    font-weight: 700;
     margin-bottom: var(--space-sm);
-    color: var(--white); /* More vibrant title color */
+    color: var(--white);
+    text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3); /* Glow effect */
 }
 
+/* Subtitle */
 .portfolio__technologies-description {
     font-size: 26px;
     color: var(--gray_700);
+    opacity: 0.8;
 }
 
-/* List of Technologies */
+/* Technologies Container */
 .portfolio__technologies-list {
     display: flex;
     flex-wrap: wrap;
@@ -299,38 +327,60 @@
 /* Each section (Frontend, DevOps, Languages) */
 .portfolio__technologies-item {
     width: 100%;
-    max-width: 300px;
-    background: var(--white);
-    padding: var(--space-md);
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    padding: 20px;
+    border-radius: 14px;
     text-align: center;
     margin-bottom: var(--space-xl);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2), 
+                0 10px 30px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    position: relative;
+    color: white;
 }
 
-/* Section titles (Frontend, DevOps, etc.) */
+/* Section titles (Frontend, DevOps, Languages) */
 .portfolio__technologies-item h3 {
     font-size: 28px;
     font-weight: 600;
     margin-bottom: var(--space-md);
-    color: var(--gray_900_59);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Hover Effects */
 .portfolio__technologies-item:hover {
-    transform: scale(1.05); /* Slight zoom-in effect */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 
+                0 15px 40px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
 }
 
+/* Different section background colors */
+.frontend {
+    background: linear-gradient(145deg, #ff8c00, #ff6600); /* Orange shades */
+}
 
+.devops {
+    background: linear-gradient(145deg, #3b82f6, #2563eb); /* Blue shades */
+}
 
-/* List styling */
+.languages {
+    background: linear-gradient(145deg, #9333ea, #6b21a8); /* Purple shades */
+}
+
+/* Tech List Styling */
 .technologies-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+/* Tech Items */
 .technologies-list li {
     display: flex;
     align-items: center;
@@ -338,41 +388,26 @@
     gap: 18px;
     margin-bottom: var(--space-sm);
     font-size: 20px;
-    color: var(--gray_900_03);
-    transition: color 0.3s ease; /* Smooth transition for text color */
+    color: white;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
+/* Hover effects for text */
 .technologies-list li:hover {
-    color: var(--white); /* Change text color on hover */
+    transform: scale(1.1);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* Icons */
+/* Tech Icons */
 .tech-icon {
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Transition for icon animation */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Hover effects for icons */
+/* Icon Hover Effects */
 .technologies-list li:hover .tech-icon {
-    transform: scale(1.2); /* Slightly enlarge icon on hover */
-    filter: brightness(1.5); /* Brighten the icon */
-}
-
-
-/* Different section background colors (Frontend, DevOps, Languages) */
-.frontend {
-    background-color: var(--deep_purple_a100);
-    border-radius: var(--radius-sm);
-}
-
-.devops {
-    background-color: var(--deep_purple_a200_01);
-    border-radius: var(--radius-sm);
-}
-
-.languages {
-    background-color: var(--deep_purple_a700);
-    border-radius: var(--radius-sm);
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
 }
