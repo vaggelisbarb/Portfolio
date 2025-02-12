@@ -46,4 +46,4 @@ The following technologies were used to build and deploy this website:
 
 ## Getting Started
 
-To view the website, you can visit the live version hosted on GitHub Pages at [link-to-your-site](#).
+To view the website, you can visit the live version hosted on GitHub Pages at [https://evangelosbarbalias.gr/](#).
