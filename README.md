@@ -22,12 +22,12 @@ Here are some screenshots of how the portfolio website looks across different de
 
 ### Laptop View
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/73589969-5128-48d3-8d02-320507e53089" alt="Laptop Screenshot" width="600">
+  <img src="https://github.com/user-attachments/assets/d8792bf5-97de-45cc-98dd-d1621f766474" alt="Laptop Screenshot" width="600">
 </p>
 
 ### Desktop View
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/543d5b56-1ab9-4d43-9fa5-012a0b29f147" alt="PC Screenshot" width="500" height="700">
+  <img src="https://github.com/user-attachments/assets/cde9a6a5-26ac-44e4-a9c9-fd6b9653d46c" alt="PC Screenshot" width="500" height="700">
 </p>
 
 ## Features
