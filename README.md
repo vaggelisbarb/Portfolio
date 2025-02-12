@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/8f09e641-3c49-4de0-81e8-094bfc294e27)# My Portfolio Website
+# My Portfolio Website
 
 Welcome to the repository for my personal portfolio website! This website showcases my skills, projects, and experience as a software developer with a passion for web development, Android development, IoT, and microservices.
 
@@ -16,7 +16,7 @@ Here are some screenshots of how the portfolio website looks across different de
 
 ### Mobile View
 <p align="center">
-  <img src=![image](https://github.com/user-attachments/assets/cd9a4f57-ce95-4002-93ff-3b9f3db1aad7)
+  <img src="https://github.com/user-attachments/assets/cd9a4f57-ce95-4002-93ff-3b9f3db1aad7"
  alt="Phone Screenshot" width="300">
 </p>
 
