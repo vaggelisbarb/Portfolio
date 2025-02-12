@@ -16,7 +16,8 @@ Here are some screenshots of how the portfolio website looks across different de
 
 ### Mobile View
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b7297527-d2c2-47b2-b9a6-f0bc6f4c4c5d" alt="Phone Screenshot" width="300">
+  <img src="![image](https://github.com/user-attachments/assets/519f286d-7178-4f8b-a20f-74c70af8bdb9)
+" alt="Phone Screenshot" width="300">
 </p>
 
 ### Laptop View
