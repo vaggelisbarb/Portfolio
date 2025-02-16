@@ -1,4 +1,5 @@
 downloadCV();
+openSocketGuardianRepo();
 
 function downloadCV() {
     // Implement download CV functionality here
@@ -33,4 +34,11 @@ function openSameTabPage(htmlPage) {
 
 function openThesisRepo() {
     window.open('https://github.com/vaggelisbarb/RISCV-Microprocessor', '_blank');
+}
+
+function openSocketGuardianRepo() {
+    document.querySelector('.project-git-link.socket-guardian')
+        .addEventListener('click', () => { 
+            window.open('https://github.com/vaggelisbarb/SocketGuardian', '_blank');
+        });
 }
